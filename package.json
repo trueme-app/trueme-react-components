@@ -18,7 +18,6 @@
     "react-scripts": "3.0.1",
     "styled-components": "^4.3.2",
     "trueme-design-system": "https://github.com/trueme-app/trueme-design-system",
-    "trueme-tslint-config": "https://github.com/trueme-app/trueme-tslint-config",
     "typescript": "3.5.2"
   },
   "scripts": {
@@ -33,6 +32,7 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.3.3",
     "@storybook/react": "^5.1.9",
+    "trueme-tslint-config": "https://github.com/trueme-app/trueme-tslint-config",
     "tslint": "^5.18.0",
     "tslint-eslint-rules": "^5.4.0",
     "tslint-react": "^4.0.0",
