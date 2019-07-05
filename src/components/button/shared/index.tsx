@@ -1,8 +1,7 @@
 import React, { Component, ComponentType, ReactNode } from 'react'
-import { TouchableHighlight } from 'react-native'
 
 export interface IButtonProps {
-  children?: ReactNode[]
+  children?: ReactNode
   onPress?: () => void
 }
 

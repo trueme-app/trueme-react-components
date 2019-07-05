@@ -17,12 +17,14 @@
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
     "styled-components": "^4.3.2",
-    "trueme-design-system": "https://github.com/trueme-app/trueme-design-system",
-    "typescript": "3.5.2"
+    "trueme-design-system": "https://github.com/trueme-app/trueme-design-system"
   },
   "scripts": {
     "build": "tsc",
-    "lint": "tslint lib/**/*.{ts,tsx} -t stylish"
+    "lint": "tslint lib/**/*.{ts,tsx} -t stylish",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook -o docs",
+    "deploy-storybook": "storybook-to-ghpages --out=docs"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.0",
@@ -31,11 +33,21 @@
     "@babel/preset-env": "^7.5.0",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.3.3",
+    "@storybook/addon-actions": "^5.1.9",
+    "@storybook/addon-info": "^5.1.9",
+    "@storybook/addon-links": "^5.1.9",
+    "@storybook/addons": "^5.1.9",
     "@storybook/react": "^5.1.9",
+    "@storybook/storybook-deployer": "^2.8.1",
+    "@types/storybook__react": "^4.0.2",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.0.6",
+    "react-docgen-typescript-loader": "^3.1.0",
     "trueme-tslint-config": "https://github.com/trueme-app/trueme-tslint-config",
     "tslint": "^5.18.0",
     "tslint-eslint-rules": "^5.4.0",
     "tslint-react": "^4.0.0",
-    "tslint-react-recommended": "^1.0.15"
+    "tslint-react-recommended": "^1.0.15",
+    "typescript": "3.5.2"
   }
 }

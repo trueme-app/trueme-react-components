@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "src",
     "paths": {
       "@components/*": [
-        "lib/components/*"
+        "components/*"
       ]
     },
     "lib": ["es2017", "es7", "es6", "dom"],
@@ -17,10 +17,11 @@
     "forceConsistentCasingInFileNames": true,
     "module": "commonjs",
     "moduleResolution": "node",
-    "jsx": "react"
+    "jsx": "react",
+    "rootDirs": ["src", "stories"]
   },
   "include": [
-    "./lib/*"
+    "./src/*"
   ],
   "exclude": [
     "node_modules",
