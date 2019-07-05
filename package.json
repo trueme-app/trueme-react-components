@@ -21,7 +21,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "lint": "tslint lib/**/*.{ts,tsx} -t stylish",
+    "lint": "tslint src/**/*.{ts,tsx} -t stylish",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o docs",
     "deploy-storybook": "storybook-to-ghpages --out=docs"
