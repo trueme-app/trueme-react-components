@@ -11,7 +11,7 @@ const baseStyles = css`
 `
 
 const attrStyles = {
-  underlayColor: colours.green.dark
+  underlayColor: colours.green.dark,
 }
 
 export {

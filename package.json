@@ -18,11 +18,12 @@
     "react-scripts": "3.0.1",
     "styled-components": "^4.3.2",
     "trueme-design-system": "https://github.com/trueme-app/trueme-design-system",
+    "trueme-tslint-config": "https://github.com/trueme-app/trueme-tslint-config",
     "typescript": "3.5.2"
   },
   "scripts": {
     "build": "tsc",
-    "lint": "tslint lib/**/*.ts"
+    "lint": "tslint lib/**/*.{ts,tsx} -t stylish"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.0",

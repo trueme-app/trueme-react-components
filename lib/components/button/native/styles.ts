@@ -6,5 +6,5 @@ const nativeStyles = css`
 `
 
 export {
-  nativeStyles
+  nativeStyles,
 }

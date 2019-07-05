@@ -6,5 +6,5 @@ const webStyles = css`
 `
 
 export {
-  webStyles
+  webStyles,
 }
