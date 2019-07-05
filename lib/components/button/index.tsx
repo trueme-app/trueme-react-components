@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Button from './shared'
-import styles from './shared/styles'
+import { baseStyles } from './shared/styles'
 
-const StyledButton = styled.button`${styles}`
+const StyledButton = styled.button`${baseStyles}`
 
 export default Button(StyledButton)
