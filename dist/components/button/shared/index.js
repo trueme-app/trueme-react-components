@@ -39,8 +39,7 @@ var Button = function (StyledButton) {
             return _super !== null && _super.apply(this, arguments) || this;
         }
         Base.prototype.render = function () {
-            var _a = this.props, onPress = _a.onPress, children = _a.children;
-            return (react_1.default.createElement(StyledButton, __assign({}, this.props, { onPress: onPress }), children));
+            return (react_1.default.createElement(StyledButton, __assign({}, this.props)));
         };
         return Base;
     }(react_1.Component));

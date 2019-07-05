@@ -9,8 +9,7 @@ export interface IButtonProps {
 const Button = <T extends object>(StyledButton: ComponentType<T>) =>
   class Base extends Component<T & IButtonProps> {
     render() {
-      const { onPress, children } = this.props
-      return (<StyledButton {...this.props as T}>{children}</StyledButton>)
+      return (<StyledButton {...this.props as T}/>)
     }
   }
 
