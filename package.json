@@ -19,8 +19,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "lint": "tslint lib/**/*.ts",
-    "postinstall": "node_modules/.bin/tsc"
+    "lint": "tslint lib/**/*.ts"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.0",
