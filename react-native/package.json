@@ -1,0 +1,4 @@
+{
+  "main": "dist/react-native.js",
+  "types": "dist/react-native.d.ts"
+}

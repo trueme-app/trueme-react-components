@@ -1,19 +1,16 @@
-import React, { Component } from 'react'
+import React, { Component, ComponentType, ReactNode } from 'react'
+import { TouchableHighlight } from 'react-native'
 
-interface IButtonProps {
-  children?: React.ReactNode[]
+export interface IButtonProps {
+  children?: ReactNode[]
   onPress?: () => void
 }
 
-interface IButton {
-  StyledButton: React.ReactNode
-}
-
-const Button = <P extends IButton>(StyledButton: React.ComponentType<P>) =>
-  class Base extends React.Component<IButtonProps> {
+const Button = <T extends object>(StyledButton: ComponentType<T>) =>
+  class Base extends Component<T & IButtonProps> {
     render() {
       const { onPress, children } = this.props
-      return <StyledButton onPress={onPress}>{children}</StyledButton>
+      return (<StyledButton {...this.props as T} onPress={onPress}>{children}</StyledButton>)
     }
   }
 

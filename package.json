@@ -7,26 +7,18 @@
     "@types/node": "12.0.12",
     "@types/react": "16.8.23",
     "@types/react-dom": "16.8.4",
+    "@types/react-native": "^0.60.0",
+    "@types/styled-components": "^4.1.16",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
     "styled-components": "^4.3.2",
+    "trueme-design-system": "https://github.com/trueme-app/trueme-design-system",
     "typescript": "3.5.2"
   },
   "scripts": {
+    "build": "tsc",
     "lint": "tslint lib/**/*.ts"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
   },
   "devDependencies": {
     "@babel/cli": "^7.5.0",

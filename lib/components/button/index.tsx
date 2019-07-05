@@ -4,4 +4,4 @@ import styles from './shared/styles'
 
 const StyledButton = styled.button`${styles}`
 
-export default new Button(StyledButton)
+export default Button(StyledButton)
