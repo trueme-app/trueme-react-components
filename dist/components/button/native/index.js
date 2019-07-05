@@ -11,6 +11,7 @@ var native_1 = __importDefault(require("styled-components/native"));
 var react_native_1 = require("react-native");
 var shared_1 = __importDefault(require("../shared"));
 var styles_1 = require("../shared/styles");
-var StyledButton = native_1.default(react_native_1.TouchableHighlight).attrs(styles_1.attrStyles)(templateObject_1 || (templateObject_1 = __makeTemplateObject(["", ""], ["", ""])), styles_1.baseStyles);
+var styles_2 = require("./styles");
+var StyledButton = native_1.default(react_native_1.TouchableHighlight).attrs(styles_1.attrStyles)(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  ", "\n  ", "\n"], ["\n  ", "\n  ", "\n"])), styles_1.baseStyles, styles_2.nativeStyles);
 exports.default = shared_1.default(StyledButton);
 var templateObject_1;

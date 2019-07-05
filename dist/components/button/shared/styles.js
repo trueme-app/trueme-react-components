@@ -5,11 +5,11 @@ var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cook
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var styled_components_1 = require("styled-components");
-var trueme_design_system_1 = require("trueme-design-system");
-var baseStyles = styled_components_1.css(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  background-color: ", ";\n  border-radius: ", ";\n  padding: ", " ", ";\n\n  &:hover {\n    background-color: ", ";\n  }\n"], ["\n  background-color: ", ";\n  border-radius: ", ";\n  padding: ", " ", ";\n\n  &:hover {\n    background-color: ", ";\n  }\n"])), trueme_design_system_1.colours.green.base, trueme_design_system_1.borders.radius.base, trueme_design_system_1.spacing.md, trueme_design_system_1.spacing.xl, trueme_design_system_1.colours.green.dark);
+var react_1 = require("trueme-design-system/react");
+var baseStyles = styled_components_1.css(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  background-color: ", ";\n  border-radius: ", ";\n\n  &:hover {\n    background-color: ", ";\n  }\n"], ["\n  background-color: ", ";\n  border-radius: ", ";\n\n  &:hover {\n    background-color: ", ";\n  }\n"])), react_1.colours.green.base, react_1.borders.radius.base, react_1.colours.green.dark);
 exports.baseStyles = baseStyles;
 var attrStyles = {
-    underlayColor: trueme_design_system_1.colours.green.dark
+    underlayColor: react_1.colours.green.dark
 };
 exports.attrStyles = attrStyles;
 var templateObject_1;

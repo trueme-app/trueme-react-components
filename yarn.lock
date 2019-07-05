@@ -2115,7 +2115,7 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.0.0.tgz#d11813b9c0ff8aaca29f04cbc12817f4c7d656e5"
   integrity sha512-Jrb/x3HT4PTJp6a4avhmJCDEVrPdqLfl3e8GGMbpkGGdwAV5UGlIs4vVEfsHHfylZVOKZWpOqmqFH8CbfOZ6kg==
 
-"@types/node@12.0.12":
+"@types/node@12.0.12", "@types/node@^12.0.12":
   version "12.0.12"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.0.12.tgz#cc791b402360db1eaf7176479072f91ee6c6c7ca"
   integrity sha512-Uy0PN4R5vgBUXFoJrKryf5aTk3kJ8Rv3PdlHjl6UaX+Cqp1QE0yPQ68MPXGrZOfG7gZVNDIJZYyot0B9ubXUrQ==
@@ -11875,9 +11875,10 @@ trough@^1.0.0:
   integrity sha512-fwkLWH+DimvA4YCy+/nvJd61nWQQ2liO/nF/RjkTpiOGi+zxZzVkhb1mvbHIIW4b/8nDsYI8uTmAlc0nNkRMOw==
 
 "trueme-design-system@https://github.com/trueme-app/trueme-design-system":
-  version "1.0.0"
-  resolved "https://github.com/trueme-app/trueme-design-system#2c9f5abd27d6e2430eeec0621dc27bf45d4d3890"
+  version "0.1.1"
+  resolved "https://github.com/trueme-app/trueme-design-system#a9e4b9675f01fb9db0e6e7d5b29bcd4de1ae3007"
   dependencies:
+    "@types/node" "^12.0.12"
     modularscale-js "^3.0.1"
 
 ts-pnp@1.1.2, ts-pnp@^1.0.0, ts-pnp@^1.1.2:

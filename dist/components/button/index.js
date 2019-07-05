@@ -10,6 +10,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var styled_components_1 = __importDefault(require("styled-components"));
 var shared_1 = __importDefault(require("./shared"));
 var styles_1 = require("./shared/styles");
-var StyledButton = styled_components_1.default.button(templateObject_1 || (templateObject_1 = __makeTemplateObject(["", ""], ["", ""])), styles_1.baseStyles);
+var styles_2 = require("./styles");
+var StyledButton = styled_components_1.default.button(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  ", "\n  ", "\n"], ["\n  ", "\n  ", "\n"])), styles_1.baseStyles, styles_2.webStyles);
 exports.default = shared_1.default(StyledButton);
 var templateObject_1;
