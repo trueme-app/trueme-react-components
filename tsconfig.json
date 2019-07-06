@@ -1,11 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": "src",
-    "paths": {
-      "@components/*": [
-        "components/*"
-      ]
-    },
     "lib": ["es2017", "es7", "es6", "dom"],
     "declaration": true,
     "outDir": "./dist",
@@ -21,7 +15,7 @@
     "rootDirs": ["src", "stories"]
   },
   "include": [
-    "./src/*"
+    "src/*"
   ],
   "exclude": [
     "node_modules",
