@@ -1,0 +1,12 @@
+language: node_js
+
+install:
+  - npm uninstall @trueme/react-components --no-save
+  - npm install
+
+cache:
+  directories:
+    - node_modules
+
+git:
+  depth: 1
