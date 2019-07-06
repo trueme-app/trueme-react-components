@@ -2116,6 +2116,20 @@
     "@svgr/plugin-svgo" "^4.3.1"
     loader-utils "^1.2.3"
 
+"@trueme/design-system@^0.1.11":
+  version "0.1.11"
+  resolved "https://registry.yarnpkg.com/@trueme/design-system/-/design-system-0.1.11.tgz#8c64ac851ac02a4977dad48d7b3d6effb80b962c"
+  integrity sha512-NPqzQs/Sqp7/hRLqumAJ0HZ3hnx3/Ae2gvieGJQHwTM8PEzFcETP4Ak3VBs4RT2jNkusNQJozDWZZPZMnI7S1Q==
+  dependencies:
+    "@types/jest" "^24.0.15"
+    "@types/node" "^12.0.12"
+    modularscale-js "^3.0.1"
+
+"@trueme/tslint-config@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@trueme/tslint-config/-/tslint-config-0.1.1.tgz#6fd98fa012e804f3c2fea7d6f77351f61a5352ab"
+  integrity sha512-toueRAKMdHfrcb5uXZcBc1z5OM4j34ie/W+3Rhbsvrx1+7pBLQQLWlVYEQzgX2azG7d0RmJD+QJgngq4Jy2wWg==
+
 "@types/babel__core@^7.1.0":
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.1.tgz#ce9a9e5d92b7031421e1d0d74ae59f572ba48be6"
@@ -12596,17 +12610,6 @@ trough@^1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/trough/-/trough-1.0.3.tgz#e29bd1614c6458d44869fc28b255ab7857ef7c24"
   integrity sha512-fwkLWH+DimvA4YCy+/nvJd61nWQQ2liO/nF/RjkTpiOGi+zxZzVkhb1mvbHIIW4b/8nDsYI8uTmAlc0nNkRMOw==
-
-"trueme-design-system@https://github.com/trueme-app/trueme-design-system":
-  version "0.1.1"
-  resolved "https://github.com/trueme-app/trueme-design-system#a9e4b9675f01fb9db0e6e7d5b29bcd4de1ae3007"
-  dependencies:
-    "@types/node" "^12.0.12"
-    modularscale-js "^3.0.1"
-
-"trueme-tslint-config@https://github.com/trueme-app/trueme-tslint-config":
-  version "0.1.0"
-  resolved "https://github.com/trueme-app/trueme-tslint-config#a8cb1e07004ba233768f9438887964be7ae08b61"
 
 ts-jest@^24.0.2:
   version "24.0.2"

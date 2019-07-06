@@ -1,5 +1,5 @@
 import { css } from 'styled-components'
-import { borders, colours } from 'trueme-design-system/react'
+import { borders, colours } from '@trueme/design-system/react'
 
 const baseStyles = css`
   background-color: ${colours.green.base};
