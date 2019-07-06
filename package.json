@@ -1,8 +1,6 @@
 {
-  "name": "trueme-react-components",
+  "name": "@trueme/react-components",
   "version": "0.1.1",
-  "private": true,
-  "prepublish": "tsc",
   "repository": "https://github.com/trueme-app/trueme-react-components",
   "author": "David Johnson <david@trueme.app>",
   "license": "MIT",
@@ -24,7 +22,9 @@
     "lint": "tslint src/**/*.{ts,tsx} -t stylish",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o docs",
-    "deploy-storybook": "storybook-to-ghpages --out=docs"
+    "deploy-storybook": "storybook-to-ghpages --out=docs",
+    "prepublish": "tsc",
+    "postpublish": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.0",
