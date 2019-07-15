@@ -4,6 +4,16 @@
   "repository": "https://github.com/trueme-app/trueme-react-components",
   "author": "David Johnson <david@trueme.app>",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --verbose --coverage",
+    "lint": "tslint src/**/*.{ts,tsx} -t stylish",
+    "storybook": "start-storybook -p 6006",
+    "storybook:build": "build-storybook -o docs",
+    "storybook:deploy": "storybook-to-ghpages --out=docs",
+    "prepublish": "tsc",
+    "postpublish": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags"
+  },
   "dependencies": {
     "@trueme/design-system": "^0.1.13",
     "@types/jest": "^24.0.15",
@@ -17,16 +27,6 @@
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
     "styled-components": "^4.3.2"
-  },
-  "scripts": {
-    "build": "tsc",
-    "test": "jest --verbose --coverage",
-    "lint": "tslint src/**/*.{ts,tsx} -t stylish",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o docs",
-    "deploy-storybook": "storybook-to-ghpages --out=docs",
-    "prepublish": "tsc",
-    "postpublish": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.0",
