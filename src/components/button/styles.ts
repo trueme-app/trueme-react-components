@@ -1,10 +1,23 @@
 import { css } from 'styled-components'
-import { spacing } from '@trueme/design-system/react'
 
-const webStyles = css`
-  padding: ${spacing.md} ${spacing.xl};
+const baseStyles = css<any>`
+  background-color: ${(props) => props.theme.colours[props.variant].base};
+  border: 0;
+  border-radius: ${(props) => props.theme.borders.radius.base};
+  padding: ${(props) => props.theme.spacing.md} ${(props) => props.theme.spacing.xl};
+
+  &:hover {
+    background-color: ${(props) => props.theme.colours[props.variant].light};
+  }
 `
 
+const attrStyles = (props: any) => {
+  return {
+    underlayColor: props.theme.colours.secondary.light,
+  }
+}
+
 export {
-  webStyles,
+  baseStyles,
+  attrStyles,
 }

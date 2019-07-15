@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Button changes when hovered 1`] = `
-<button
-  className="sc-bdVaJa eOLEXI"
->
-  This is a button
-</button>
-`;
