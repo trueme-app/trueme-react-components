@@ -12,7 +12,8 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "jsx": "react",
-    "rootDirs": ["src", "stories"]
+    "rootDirs": ["src", "stories"],
+    "sourceMap": true
   },
   "include": [
     "src/*"
