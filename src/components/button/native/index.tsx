@@ -1,9 +1,9 @@
 import { TouchableHighlight } from 'react-native'
 import styled from 'styled-components/native'
-import IsomorphicButton, { IProps } from '../'
+import IsomorphicButton, { ButtonProps } from '../'
 import { attrStyles, baseStyles } from '../styles'
 
-const StyledButton = styled(TouchableHighlight).attrs(attrStyles)<IProps>`
+const StyledButton = styled(TouchableHighlight).attrs(attrStyles)<ButtonProps>`
   ${baseStyles}
 `
 

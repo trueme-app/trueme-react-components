@@ -1,13 +1,16 @@
+import { HTMLAttributes } from 'react'
 import styled from 'styled-components'
-import IsomorphicButton, { IProps } from '../'
+import IsomorphicButton, { ButtonProps } from '../'
 import { baseStyles } from '../styles'
 
-const StyledButton = styled.button<IProps>`
+interface ButtonWebProps extends HTMLAttributes<HTMLButtonElement> {}
+
+const StyledButton = styled.button<ButtonProps & ButtonWebProps>`
   ${baseStyles}
 `
 
 StyledButton.defaultProps = {
-  variant: 'secondary'
+  variant: 'secondary',
 }
 
 export default IsomorphicButton(StyledButton)
