@@ -6,8 +6,6 @@ const StyledButton = styled.button<IProps>`
   ${baseStyles}
 `
 
-console.log(baseStyles)
-
 StyledButton.defaultProps = {
   variant: 'secondary'
 }
