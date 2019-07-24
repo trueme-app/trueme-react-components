@@ -1,16 +1,15 @@
 import { HTMLAttributes } from 'react'
 import styled from 'styled-components'
-import IsomorphicButton, { ButtonProps } from '../'
-import { baseStyles } from '../styles'
+import withButton, { ButtonProps } from '../'
+import { buttonStyles, containerStyles, textStyles } from '../styles'
 
-interface ButtonWebProps extends HTMLAttributes<HTMLButtonElement> {}
+interface ButtonHTMLProps extends HTMLAttributes<HTMLButtonElement> {}
 
-const StyledButton = styled.button<ButtonProps & ButtonWebProps>`
-  ${baseStyles}
+const StyledButton = styled.button<ButtonProps & ButtonHTMLProps>`
+  ${containerStyles}
+  ${buttonStyles}
+  ${textStyles}
+  max-width: 375px;
 `
 
-StyledButton.defaultProps = {
-  variant: 'secondary',
-}
-
-export default IsomorphicButton(StyledButton)
+export default withButton(StyledButton)

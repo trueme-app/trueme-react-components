@@ -13,10 +13,12 @@
     "moduleResolution": "node",
     "jsx": "react",
     "rootDirs": ["src", "stories"],
-    "sourceMap": true
+    "sourceMap": true,
+    "types": [ "node" ]
   },
   "include": [
-    "src/*"
+    "src/*",
+    "typings/*"
   ],
   "exclude": [
     "node_modules",

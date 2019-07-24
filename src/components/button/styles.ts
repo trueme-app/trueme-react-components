@@ -2,29 +2,37 @@ import { css } from 'styled-components'
 import { ThemeProps, IColourDefinition } from '@trueme/design-system/react'
 import { ButtonProps } from './index'
 
-const defaultProps = {
-  variant: 'secondary'
-}
-
-const baseStyles = css<ThemeProps & ButtonProps>`
-  background-color: ${(props) => props.theme.colours[props.variant || defaultProps.variant].base};
+export const containerStyles = css<ThemeProps & ButtonProps>`
+  background-color: ${({ variant, theme: { colours }}) => colours[variant!].base};
+  border-radius: ${({ theme: { borders }}) => borders.radius.xl};
   border: 0;
-  border-radius: ${(props) => props.theme.borders.radius.base};
-  padding: ${(props) => props.theme.spacing.md} ${(props) => props.theme.spacing.xl};
+  width: 100%;
+`
+
+export const buttonStyles = css<ThemeProps & ButtonProps>`
+  padding: ${({ theme: { spacing }}) => spacing.md} ${({ theme: { spacing }}) => spacing.xl};
+  align-items: center;
 
   &:hover {
-    background-color: ${(props) => props.theme.colours[props.variant || defaultProps.variant].light};
+    background-color: ${({ variant, theme: { colours }}) => colours[variant!].light};
+  }
+
+  &:focus {
+    outline: 0;
   }
 `
 
-const attrStyles = (props: ThemeProps & ButtonProps) => {
-  const colour: IColourDefinition = props.theme.colours[props.variant || defaultProps.variant] as IColourDefinition
+export const textStyles = css<ThemeProps & ButtonProps>`
+  color: ${({ variant, theme: { colours }}) => colours[variant!].text};
+  font-family: ${({ theme: { typography }}) => typography.body.base.font};
+  font-size: ${({ theme: { typography }}) => typography.body.base.size};
+  text-align: center;
+`
+
+export const attrStyles = (props: ThemeProps & ButtonProps) => {
+  const { variant, theme: { colours } } = props
+  const colour: IColourDefinition = colours[variant!] as IColourDefinition
   return {
     underlayColor: colour.light,
   }
-}
-
-export {
-  baseStyles,
-  attrStyles,
 }

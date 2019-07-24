@@ -1,11 +1,14 @@
 import React, { ComponentType, FC } from 'react'
 
 export interface ButtonProps {
-  variant?: 'primary' | 'secondary' | 'tertiary'
+  variant?: 'primary' | 'secondary' | 'tertiary' | 'quaternary' | 'quinary' | 'senary'
 }
 
-const IsomorphicButton = <T extends object>(
+const BaseButton = <T extends object>(
   StyledButton: ComponentType<T & ButtonProps>
-): React.FC<T & ButtonProps> => (props: ButtonProps) => (<StyledButton {...props as T}/>)
+): React.FC<T & ButtonProps> => ({
+  variant = 'primary',
+  ...props
+}: T & ButtonProps) => (<StyledButton variant={variant} {...props as T}/>)
 
-export default IsomorphicButton
+export default BaseButton
