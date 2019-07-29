@@ -1,14 +1,42 @@
-import React, { ComponentType, FC } from 'react'
+import { HTMLAttributes } from 'react'
+import styled from 'styled-components'
+import withButton, { ButtonProps } from './shared'
+import { buttonStyles, containerStyles, textStyles } from './styles'
 
-export interface ButtonProps {
-  variant?: 'primary' | 'secondary' | 'tertiary' | 'quaternary' | 'quinary' | 'senary'
-}
+interface ButtonHTMLProps extends HTMLAttributes<HTMLButtonElement> {}
 
-const BaseButton = <T extends object>(
-  StyledButton: ComponentType<T & ButtonProps>
-): React.FC<T & ButtonProps> => ({
-  variant = 'primary',
-  ...props
-}: T & ButtonProps) => (<StyledButton variant={variant} {...props as T}/>)
+const StyledButton = styled.button<ButtonProps & ButtonHTMLProps>`
+  ${containerStyles}
+  ${buttonStyles}
+  ${textStyles}
+  ${({ shape, autoWidth }) => {
+    switch(shape) {
+      case 'circle':
+        return `
+          height: 45px;
+          width: 45px;
+        `
+      case 'pill':
+      default:
+        if (!autoWidth) {
+          return `width: 100%;`
+        }
+    }
+  }}
+  max-width: 375px;
 
-export default BaseButton
+  &:hover {
+    ${({ reversed, variant, theme: { colours }}) => {
+      if (reversed) {
+        return `color: ${colours[variant!].text};`
+      }
+    }}
+    background-color: ${({ variant, theme: { colours }}) => colours[variant!].light};
+  }
+
+  &:focus {
+    outline: 0;
+  }
+`
+
+export default withButton(StyledButton)

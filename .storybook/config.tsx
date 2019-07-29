@@ -1,6 +1,7 @@
-import React from 'react'
 import { configure, addDecorator } from '@storybook/react'
-import { themes } from '@trueme/design-system/react'
+import { themes } from '@trueme/design-system'
+import React from 'react'
+import { jsxDecorator } from 'storybook-addon-jsx'
 import { withThemesProvider } from 'storybook-addon-styled-component-theme'
 import GlobalStyles from './styles'
 
@@ -21,6 +22,7 @@ function withGlobalStyles(story: any) {
 
 addDecorator(withThemesProvider(systemThemes))
 addDecorator(withGlobalStyles)
+addDecorator(jsxDecorator)
 
 function loadStories() {
   req.keys().forEach(req)

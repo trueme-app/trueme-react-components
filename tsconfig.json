@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+        "*": ["*", "*.native", "*.ios", "*.android"]
+    },
+    "downlevelIteration": true,
     "lib": ["es2017", "es7", "es6", "dom"],
     "declaration": true,
     "outDir": "./dist",

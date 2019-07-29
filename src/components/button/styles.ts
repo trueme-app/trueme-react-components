@@ -1,29 +1,67 @@
 import { css } from 'styled-components'
-import { ThemeProps, IColourDefinition } from '@trueme/design-system/react'
-import { ButtonProps } from './index'
+import { ThemeProps, IColourDefinition } from '@trueme/design-system'
+import { ButtonProps } from './shared'
 
 export const containerStyles = css<ThemeProps & ButtonProps>`
-  background-color: ${({ variant, theme: { colours }}) => colours[variant!].base};
   border-radius: ${({ theme: { borders }}) => borders.radius.xl};
   border: 0;
-  width: 100%;
+
+  ${({ reversed, variant, theme: { borders, colours } }) => {
+    if (reversed) {
+      return `
+        background-color: transparent;
+        border-color: ${colours[variant!].base};
+        border-width: ${borders.width.default};
+        border-style: solid;
+      `
+    } else {
+      return `background-color: ${colours[variant!].base};`
+    }
+  }}
 `
 
 export const buttonStyles = css<ThemeProps & ButtonProps>`
-  padding: ${({ theme: { spacing }}) => spacing.md} ${({ theme: { spacing }}) => spacing.xl};
   align-items: center;
+  display: flex;
+  justify-content: center;
 
-  &:hover {
-    background-color: ${({ variant, theme: { colours }}) => colours[variant!].light};
-  }
-
-  &:focus {
-    outline: 0;
-  }
+  ${({ shape, size, theme: { spacing }}) => {
+    switch(shape) {
+      case 'circle':
+        return `
+          padding: 0;
+        `
+      case 'pill':
+      default:
+        switch(size) {
+          case 'small':
+            return `
+              padding-top: ${spacing.sm};
+              padding-bottom: ${spacing.sm};
+              padding-left: ${spacing.md};
+              padding-right: ${spacing.md};
+            `
+          case 'normal':
+          default:
+            return `
+              padding-top: ${spacing.md};
+              padding-bottom: ${spacing.md};
+              padding-left: ${spacing.xl};
+              padding-right: ${spacing.xl};
+            `
+        }
+    }
+  }}
 `
 
 export const textStyles = css<ThemeProps & ButtonProps>`
-  color: ${({ variant, theme: { colours }}) => colours[variant!].text};
+  ${({ reversed, variant, theme: { colours } }) => {
+    if (reversed) {
+      return `color: ${colours[variant!].base};`
+    } else {
+      return `color: ${colours[variant!].text};`
+    }
+  }}
   font-family: ${({ theme: { typography }}) => typography.body.base.font};
   font-size: ${({ theme: { typography }}) => typography.body.base.size};
   text-align: center;

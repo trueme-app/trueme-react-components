@@ -1,4 +1,0 @@
-{
-  "main": "../dist/native.js",
-  "types": "../dist/native.d.ts"
-}
