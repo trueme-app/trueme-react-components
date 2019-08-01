@@ -5,7 +5,7 @@ export interface HeadingProps {
 }
 
 const BaseHeading = <T extends object>(
-  StyledHeading: ComponentType<T & HeadingProps>
+  StyledHeading: ComponentType<T & HeadingProps>,
 ): React.FC<T & HeadingProps> => ({
   level = 1,
   ...props

@@ -1,7 +1,7 @@
 import { HTMLAttributes } from 'react'
 import styled from 'styled-components'
-import { withDots, DotsProps , DotsItemProps} from './shared'
-import { listStyles, itemStyles } from './styles'
+import { DotsItemProps, DotsProps, withDots } from './shared'
+import { itemStyles, listStyles } from './styles'
 
 const DotsList = styled.ul<DotsProps & HTMLAttributes<HTMLUListElement>>`
   ${listStyles}

@@ -6,7 +6,7 @@ export const containerStyles = css<ThemeProps & ButtonProps>`
   border-radius: ${({ theme: { borders }}) => borders.radius.xl};
   border: 0;
 
-  ${({ reversed, variant, theme: { borders, colours } }) => {
+  ${({ disabled, reversed, variant, theme: { borders, colours } }) => {
     if (reversed) {
       return `
         background-color: transparent;
@@ -15,6 +15,10 @@ export const containerStyles = css<ThemeProps & ButtonProps>`
         border-style: solid;
       `
     } else {
+      if (disabled) {
+        return `background-color: ${colours.disabled.background};`
+      }
+
       return `background-color: ${colours[variant!].base};`
     }
   }}

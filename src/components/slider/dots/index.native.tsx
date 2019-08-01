@@ -1,8 +1,8 @@
 import React from 'react'
 import { View } from 'react-native'
 import styled from 'styled-components/native'
-import { withDots, DotsProps, DotsItemProps } from './shared'
-import { listStyles, itemStyles } from './styles'
+import { DotsItemProps, DotsProps, withDots } from './shared'
+import { itemStyles, listStyles } from './styles'
 
 const DotsList = styled(View)<DotsProps>`
   ${listStyles};

@@ -10,7 +10,7 @@ const StyledButton = styled.button<ButtonProps & ButtonHTMLProps>`
   ${buttonStyles}
   ${textStyles}
   ${({ shape, autoWidth }) => {
-    switch(shape) {
+    switch (shape) {
       case 'circle':
         return `
           height: 45px;
