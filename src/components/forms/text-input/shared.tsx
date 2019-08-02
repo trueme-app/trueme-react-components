@@ -1,8 +1,22 @@
 import React, { ComponentType, FC } from 'react'
-import { StyledComponent } from 'styled-components'
+
+export type InputProps = {
+  valid?: boolean
+  verificationCode?: boolean
+  onFulfill?: (code: number) => void
+}
 
 export const withTextInput = <T extends object>(
-  StyledInput: ComponentType<T>,
-): React.FC<T> => ({
+  StyledInput: ComponentType<T & InputProps>,
+): React.FC<T & InputProps> => ({
+  valid = undefined,
+  verificationCode = false,
+  onFulfill = () => {},
   ...props
-}: T) => (<StyledInput {...props as T}/>)
+}: T & InputProps) => (
+  <StyledInput
+    onFulfill={onFulfill}
+    verificationCode={verificationCode}
+    valid={valid}
+    {...props as T}/>
+)

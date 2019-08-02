@@ -1,17 +1,30 @@
 import { css } from 'styled-components'
 import { ThemeProps } from '@trueme/design-system'
+import { InputProps } from './shared'
 
-export const borderStyles = css<ThemeProps>`
-  ${({ theme: { borders, colours, spacing, typography }}) => {
+export const borderStyles = css<ThemeProps & InputProps>`
+  ${({ valid, theme: { borders, colours }}) => {
+    let borderColor
+    switch(valid) {
+      case true:
+        borderColor = colours.valid
+        break;
+      case false:
+        borderColor = colours.invalid
+        break;
+      default:
+        borderColor = colours.text
+    }
+
     return `
-      border-bottom-color: ${colours.text};
+      border-bottom-color: ${borderColor};
       border-bottom-width: ${borders.width.default};
       width: 100%;
     `
   }}
 `
 
-export const inputStyles = css<ThemeProps>`
+export const inputStyles = css<ThemeProps & InputProps>`
   ${({ theme: { borders, colours, spacing, typography }}) => {
     return `
       border: 0;

@@ -20,6 +20,15 @@ const BaseButton = <T extends object>(
   autoWidth = true,
   disabled = false,
   ...props
-}: T & ButtonProps) => (<StyledButton disabled={disabled} autoWidth={autoWidth} size={size} reversed={reversed} shape={shape} variant={variant} {...props as T}/>)
+}: T & ButtonProps) => (
+  <StyledButton
+    disabled={disabled}
+    autoWidth={autoWidth}
+    size={size}
+    reversed={reversed}
+    shape={shape}
+    variant={variant}
+    {...props as T}/>
+)
 
 export default BaseButton

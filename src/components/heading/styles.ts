@@ -8,6 +8,7 @@ export const textStyles = css<ThemeProps & HeadingProps>`
   font-size: ${({ level, theme: { typography }}) => typography.headings[`h${level}`].size};
   font-weight: ${({ level, theme: { typography }}) => typography.headings[`h${level}`].fontWeight};
   line-height: ${({ level, theme: { typography }}) => typography.headings[`h${level}`].lineHeight};
+  padding-right: ${({ theme: { spacing }}) => spacing.xl};
   text-align: left;
 
   ${({ theme: { spacing }}) => {

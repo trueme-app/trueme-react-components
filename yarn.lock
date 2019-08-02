@@ -1845,10 +1845,10 @@
     "@svgr/plugin-svgo" "^4.3.1"
     loader-utils "^1.2.3"
 
-"@trueme/design-system@^0.1.17":
-  version "0.1.17"
-  resolved "https://registry.yarnpkg.com/@trueme/design-system/-/design-system-0.1.17.tgz#42e50ec5dac4d9f9ecc2f3f20d1b891e6c095601"
-  integrity sha512-7mhKx71NOsDWd38V73iKc0YDbP8Y2MhCJ4KoaSgFRLzIKLEKc0r6p5BzBRh84ym2NMvXKMQECqr0QqhMpO0Vzg==
+"@trueme/design-system@^0.1.20":
+  version "0.1.20"
+  resolved "https://registry.yarnpkg.com/@trueme/design-system/-/design-system-0.1.20.tgz#79bcb04dd857f2b37c9744c555e8ec4cf0d974c4"
+  integrity sha512-T+0S/R8PvJb3EkwX8T8sgePy6oZNQyeJFBTinUE/+NXdNT7F2d/R4Jnmd09VrJmSBwbTrYS9jTsMn17xzyBNDQ==
   dependencies:
     "@types/react" "^16.8.23"
     "@types/styled-components" "^4.1.18"
@@ -10508,6 +10508,19 @@ react-lifecycles-compat@^3.0.2, react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
+
+react-native-dash@^0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/react-native-dash/-/react-native-dash-0.0.9.tgz#a07eb06a360530e42980e9cf90fd7f862705e2f2"
+  integrity sha1-oH6wajYFMOQpgOnPkP1/hicF4vI=
+  dependencies:
+    prop-types "^15.5.10"
+    react-native-measureme "0.0.1"
+
+react-native-measureme@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-measureme/-/react-native-measureme-0.0.1.tgz#8b1c5595cdbb1cfdf85bff98fe36d33e98b6162c"
+  integrity sha1-ixxVlc27HP34W/+Y/jbTPpi2Fiw=
 
 react-native-svg@^9.5.3:
   version "9.5.3"
