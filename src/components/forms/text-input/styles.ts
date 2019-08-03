@@ -1,9 +1,12 @@
 import { css } from 'styled-components'
 import { ThemeProps } from '@trueme/design-system'
-import { InputProps } from './shared'
+import { InputProps, VerificationCodeProps } from './shared'
 
-export const borderStyles = css<ThemeProps & InputProps>`
-  ${({ valid, theme: { borders, colours }}) => {
+export const borderStyles = css<ThemeProps & InputProps & VerificationCodeProps>`
+  ${({ valid, verificationCode, theme: { borders, colours }}) => {
+    if (verificationCode) {
+      return `width: 100%`
+    }
     let borderColor
     switch(valid) {
       case true:
@@ -24,8 +27,8 @@ export const borderStyles = css<ThemeProps & InputProps>`
   }}
 `
 
-export const inputStyles = css<ThemeProps & InputProps>`
-  ${({ theme: { borders, colours, spacing, typography }}) => {
+export const inputStyles = css<ThemeProps & InputProps & VerificationCodeProps>`
+  ${({ dashGap, dashWidth, digits, verificationCode, theme: { borders, colours, spacing, typography }}) => {
     return `
       border: 0;
       color: ${colours.text};
@@ -33,6 +36,12 @@ export const inputStyles = css<ThemeProps & InputProps>`
       padding-bottom: ${spacing.default};
       padding-top: ${spacing.default};
       text-align: left;
+      ${(verificationCode ? `
+        margin-left: ${((dashWidth! - dashGap!) / digits!).toFixed(2)};
+        padding-left: ${((dashWidth! - dashGap!) / digits!).toFixed(2)};
+        margin-right: ${-((dashWidth! - dashGap!)).toFixed(2)};
+        letter-spacing: ${(dashWidth! - dashGap! - 2.5).toFixed(2)};
+      ` : ``)}
     `
   }}
 `

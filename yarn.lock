@@ -1845,10 +1845,10 @@
     "@svgr/plugin-svgo" "^4.3.1"
     loader-utils "^1.2.3"
 
-"@trueme/design-system@^0.1.20":
-  version "0.1.20"
-  resolved "https://registry.yarnpkg.com/@trueme/design-system/-/design-system-0.1.20.tgz#79bcb04dd857f2b37c9744c555e8ec4cf0d974c4"
-  integrity sha512-T+0S/R8PvJb3EkwX8T8sgePy6oZNQyeJFBTinUE/+NXdNT7F2d/R4Jnmd09VrJmSBwbTrYS9jTsMn17xzyBNDQ==
+"@trueme/design-system@^0.1.21":
+  version "0.1.21"
+  resolved "https://registry.yarnpkg.com/@trueme/design-system/-/design-system-0.1.21.tgz#49867a33fb7cb2542ebe476cd6e573d1d0a1ed99"
+  integrity sha512-H7ttWoOUtVBnr8ArtZ/koqovGKt/lbLAGEWtUUxzwGVjlvb9Ek1HYGkXWeaaTUB4hSzVhoRSoaiNBvbJiS5NXg==
   dependencies:
     "@types/react" "^16.8.23"
     "@types/styled-components" "^4.1.18"
