@@ -3,8 +3,9 @@ import React, { Component } from 'react'
 import { TextInput, View } from 'react-native'
 import styled, { ThemeConsumer } from 'styled-components/native'
 import Dash from 'react-native-dash'
+import Button from '../../button/index.native'
 import { withTextInput, InputProps } from './shared'
-import { borderStyles, inputStyles } from './styles'
+import { borderStyles, inputStyles, passwordToggleStyles } from './styles'
 
 const StyledView = styled(View)`
   ${borderStyles};
@@ -14,6 +15,10 @@ const StyledTextInput = styled(TextInput)`
   ${inputStyles};
 `
 
+const ButtonContainer = styled(View)`
+  ${passwordToggleStyles}
+`
+
 type State = {
   width: number
   height: number
@@ -21,6 +26,7 @@ type State = {
   y: number
   dashGap: number
   dashWidth: number
+  showPassword: boolean
 }
 
 class StyledContainer extends Component<InputProps, State> {
@@ -31,6 +37,7 @@ class StyledContainer extends Component<InputProps, State> {
     y: 0,
     dashGap: 8,
     dashWidth: 0,
+    showPassword: false,
   }
 
   getDimensions = (e: any) => {
@@ -43,12 +50,17 @@ class StyledContainer extends Component<InputProps, State> {
     }
   }
 
+  togglePassword = () => {
+    this.setState((prevState) => ({ showPassword: !prevState.showPassword }))
+  }
+
 
   render() {
-    const { valid, digits } = this.props
+    const { valid, digits, secureTextEntry, verificationCode } = this.props
+    console.log(this.state.showPassword)
     return (
       <StyledView {...this.props}>
-        {this.props.verificationCode ? (
+        {verificationCode ? (
           <View onLayout={this.getDimensions}>
             <ThemeConsumer>
               {({ colours }) => {
@@ -80,7 +92,14 @@ class StyledContainer extends Component<InputProps, State> {
             </ThemeConsumer>
           </View>
         ) : (
-          <StyledTextInput {...this.props}/>
+          <>
+            <StyledTextInput {...this.props} isPassword={secureTextEntry} secureTextEntry={!this.state.showPassword}/>
+            {secureTextEntry && (
+              <ButtonContainer>
+                <Button reversed={true} variant='tertiary' size='small' onPress={this.togglePassword}>Show</Button>
+              </ButtonContainer>
+            )}
+          </>
         )}
       </StyledView>
     )

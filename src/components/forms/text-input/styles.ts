@@ -1,6 +1,6 @@
 import { css } from 'styled-components'
 import { ThemeProps } from '@trueme/design-system'
-import { InputProps, VerificationCodeProps } from './shared'
+import { InputProps, InputReadOnlyProps, VerificationCodeProps } from './shared'
 
 export const borderStyles = css<ThemeProps & InputProps & VerificationCodeProps>`
   ${({ valid, verificationCode, theme: { borders, colours }}) => {
@@ -27,13 +27,14 @@ export const borderStyles = css<ThemeProps & InputProps & VerificationCodeProps>
   }}
 `
 
-export const inputStyles = css<ThemeProps & InputProps & VerificationCodeProps>`
-  ${({ dashGap, dashWidth, digits, verificationCode, theme: { borders, colours, spacing, typography }}) => {
+export const inputStyles = css<ThemeProps & InputProps & InputReadOnlyProps & VerificationCodeProps>`
+  ${({ dashGap, dashWidth, digits, isPassword, verificationCode, theme: { borders, colours, spacing, typography }}) => {
     return `
       border: 0;
       color: ${colours.text};
       font-size: ${typography.headings.h2.size};
       padding-bottom: ${spacing.default};
+      padding-right: ${isPassword ? spacing.xxxl : 0};
       padding-top: ${spacing.default};
       text-align: left;
       ${(verificationCode ? `
@@ -54,4 +55,11 @@ export const webStyles = css<ThemeProps>`
   &:focus {
     outline: none;
   }
+`
+
+export const passwordToggleStyles = css<ThemeProps>`
+  position: absolute;
+  right: 0;
+  bottom: ${({ theme: { spacing }}) => spacing.default};
+  margin-bottom: ${({ theme: { spacing }}) => spacing.xs};
 `
