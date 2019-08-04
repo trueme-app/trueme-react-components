@@ -26,7 +26,6 @@ export const containerStyles = css<ThemeProps & ButtonProps>`
 
 export const buttonStyles = css<ThemeProps & ButtonProps>`
   align-items: center;
-  display: flex;
   justify-content: center;
 
   ${({ shape, size, theme: { spacing }}) => {

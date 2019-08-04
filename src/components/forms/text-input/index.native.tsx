@@ -46,7 +46,6 @@ class StyledContainer extends Component<InputProps, State> {
 
   render() {
     const { valid, digits } = this.props
-    console.log(this.props)
     return (
       <StyledView {...this.props}>
         {this.props.verificationCode ? (
