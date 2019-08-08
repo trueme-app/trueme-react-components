@@ -26,7 +26,7 @@ type State = {
   y: number
   dashGap: number
   dashWidth: number
-  showPassword: boolean
+  isSecureTextEntry: boolean
 }
 
 class StyledContainer extends Component<InputProps, State> {
@@ -37,7 +37,7 @@ class StyledContainer extends Component<InputProps, State> {
     y: 0,
     dashGap: 8,
     dashWidth: 0,
-    showPassword: false,
+    isSecureTextEntry: false,
   }
 
   getDimensions = (e: any) => {
@@ -50,14 +50,17 @@ class StyledContainer extends Component<InputProps, State> {
     }
   }
 
-  togglePassword = () => {
-    this.setState((prevState) => ({ showPassword: !prevState.showPassword }))
+  componentDidMount() {
+    const { secureTextEntry } = this.props
+    this.setState({ isSecureTextEntry: !!secureTextEntry })
   }
 
+  togglePassword = () => {
+    this.setState((prevState) => ({ isSecureTextEntry: !prevState.isSecureTextEntry }))
+  }
 
   render() {
     const { valid, digits, secureTextEntry, verificationCode } = this.props
-    console.log(this.state.showPassword)
     return (
       <StyledView {...this.props}>
         {verificationCode ? (
@@ -93,7 +96,7 @@ class StyledContainer extends Component<InputProps, State> {
           </View>
         ) : (
           <>
-            <StyledTextInput {...this.props} isPassword={secureTextEntry} secureTextEntry={!this.state.showPassword}/>
+            <StyledTextInput {...this.props} isPassword={secureTextEntry} secureTextEntry={this.state.isSecureTextEntry}/>
             {secureTextEntry && (
               <ButtonContainer>
                 <Button reversed={true} variant='tertiary' size='small' onPress={this.togglePassword}>Show</Button>
