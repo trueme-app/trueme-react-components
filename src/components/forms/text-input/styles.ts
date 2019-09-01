@@ -41,7 +41,7 @@ export const inputStyles = css<ThemeProps & InputProps & InputReadOnlyProps & Ve
         margin-left: ${((dashWidth! - dashGap!) / digits!).toFixed(2)};
         padding-left: ${((dashWidth! - dashGap!) / digits!).toFixed(2)};
         margin-right: ${-((dashWidth! - dashGap!)).toFixed(2)};
-        letter-spacing: ${(dashWidth! - dashGap! - 2.5).toFixed(2)};
+        letter-spacing: ${(dashWidth! - dashGap! - 2.6).toFixed(2)};
       ` : ``)}
     `
   }}

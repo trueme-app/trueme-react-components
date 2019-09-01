@@ -20,7 +20,7 @@ export type InputReadOnlyProps = {
 
 export const withTextInput = <T extends object>(
   StyledInput: ComponentType<T & InputProps>,
-): React.FC<T & InputProps> => ({
+): FC<T & InputProps> => ({
   valid = undefined,
   verificationCode = false,
   digits = 6,

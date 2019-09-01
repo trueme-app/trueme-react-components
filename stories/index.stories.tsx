@@ -1,10 +1,9 @@
-import React from 'react'
-import { storiesOf, addDecorator } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
-import { linkTo } from '@storybook/addon-links'
-import { withKnobs, boolean, select } from '@storybook/addon-knobs/react';
-import { Button, Dots, Heading, TextInput } from '../src'
+import { boolean, select, withKnobs } from '@storybook/addon-knobs/react'
+import { storiesOf } from '@storybook/react'
+import React from 'react'
 import ChevronRight from '../assets/icons/icon-chevron-right.svg'
+import { Button, Checkbox, Dots, Heading, TextInput } from '../src'
 
 const sizes = {
   Small: 'small',
@@ -50,3 +49,7 @@ storiesOf('Forms/Text Input', module)
   .add('with placeholder', () => <TextInput placeholder='This is a placeholder'/>)
   .add('required', () => <TextInput required/>)
   .add('password', () => <TextInput type='password'/>)
+
+storiesOf('Forms/Checkbox', module)
+  .add('default', () => <Checkbox>Check me</Checkbox>)
+  .add('checked', () => <Checkbox checked={true}>Uncheck me</Checkbox>)
