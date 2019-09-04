@@ -20,6 +20,7 @@ const ButtonFront = styled(View)<ButtonProps>`
   ${buttonStyles};
   ${({ shape }) => {
     switch (shape) {
+      case 'square':
       case 'circle':
         return `
           height: 45;

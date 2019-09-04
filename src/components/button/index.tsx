@@ -11,6 +11,7 @@ const StyledButton = styled.button<ButtonProps & ButtonHTMLProps>`
   ${textStyles}
   ${({ shape, autoWidth }) => {
     switch (shape) {
+      case 'square':
       case 'circle':
         return `
           height: 45px;

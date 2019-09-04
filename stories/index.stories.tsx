@@ -21,8 +21,15 @@ const variants = {
 
 storiesOf('Button', module)
     .addDecorator(withKnobs)
+    .add('square with text', () => {
+      const size = select('Size', sizes, 'normal', 'size') as 'small' | 'normal' | undefined
+      const reversed = boolean('Reversed', false)
+      const autoWidth = boolean('Auto Width', false)
+      const variant = select('Variant', variants, 'primary', 'variant') as 'primary' | 'secondary' | 'quaternary' | 'quinary' | 'senary'
+      return (<Button shape='square' variant={variant} size={size} reversed={reversed} autoWidth={autoWidth} onClick={action('clicked')}>1</Button>)
+    })
     .add('pill with text', () => {
-      const size = select('Size', sizes, 'normal', 'size') as 'small' | 'normal' | undefined;
+      const size = select('Size', sizes, 'normal', 'size') as 'small' | 'normal' | undefined
       const reversed = boolean('Reversed', false)
       const autoWidth = boolean('Auto Width', false)
       const variant = select('Variant', variants, 'primary', 'variant') as 'primary' | 'secondary' | 'quaternary' | 'quinary' | 'senary'

@@ -1,16 +1,16 @@
+import { IColourDefinition, ThemeProps } from '@trueme/design-system'
 import { css } from 'styled-components'
-import { ThemeProps, IColourDefinition } from '@trueme/design-system'
 import { ButtonProps } from './shared'
 
 export const containerStyles = css<ThemeProps & ButtonProps>`
-  border-radius: ${({ theme: { borders }}) => borders.radius.xl};
+  border-radius: ${({ shape, theme: { borders }}) => shape === 'square' ? borders.radius.default : borders.radius.xl};
   border: 0;
 
   ${({ disabled, reversed, variant, theme: { borders, colours } }) => {
     if (reversed) {
       return `
         background-color: transparent;
-        border-color: ${colours[variant!].base};
+        border-color: ${colours[variant].base};
         border-width: ${borders.width.default};
         border-style: solid;
       `
@@ -19,7 +19,7 @@ export const containerStyles = css<ThemeProps & ButtonProps>`
         return `background-color: ${colours.disabled.background};`
       }
 
-      return `background-color: ${colours[variant!].base};`
+      return `background-color: ${colours[variant].base};`
     }
   }}
 `
@@ -29,14 +29,15 @@ export const buttonStyles = css<ThemeProps & ButtonProps>`
   justify-content: center;
 
   ${({ shape, size, theme: { spacing }}) => {
-    switch(shape) {
+    switch (shape) {
+      case 'square':
       case 'circle':
         return `
           padding: 0;
         `
       case 'pill':
       default:
-        switch(size) {
+        switch (size) {
           case 'small':
             return `
               padding-top: ${spacing.sm};
