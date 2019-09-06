@@ -4,15 +4,13 @@ import { ButtonProps } from './shared'
 
 export const containerStyles = css<ThemeProps & ButtonProps>`
   border-radius: ${({ shape, theme: { borders }}) => shape === 'square' ? borders.radius.default : borders.radius.xl};
-  border: 0;
+  border-color: ${({ variant, theme: { colours }}) => colours[variant].base};
+  border-width: ${({ variant, theme: { borders }}) => borders.width.default};
 
-  ${({ disabled, reversed, variant, theme: { borders, colours } }) => {
+  ${({ variant, disabled, reversed, theme: { colours } }) => {
     if (reversed) {
       return `
         background-color: transparent;
-        border-color: ${colours[variant].base};
-        border-width: ${borders.width.default};
-        border-style: solid;
       `
     } else {
       if (disabled) {

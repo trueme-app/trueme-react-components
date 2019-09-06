@@ -18,10 +18,16 @@ const StyledButton = styled(TouchableHighlight).attrs(attrStyles)<ButtonProps>`
 
 const ButtonFront = styled(View)<ButtonProps>`
   ${buttonStyles};
-  ${({ shape }) => {
+  ${({ shape, size }) => {
     switch (shape) {
       case 'square':
       case 'circle':
+        if (size === 'small') {
+          return `
+            height: 32;
+            width: 32;
+          `
+        }
         return `
           height: 45;
           width: 45;

@@ -9,10 +9,16 @@ const StyledButton = styled.button<ButtonProps & ButtonHTMLProps>`
   ${containerStyles}
   ${buttonStyles}
   ${textStyles}
-  ${({ shape, autoWidth }) => {
+  ${({ shape, size, autoWidth }) => {
     switch (shape) {
       case 'square':
       case 'circle':
+        if (size === 'small') {
+          return `
+            height: 32px;
+            width: 32px;
+          `
+        }
         return `
           height: 45px;
           width: 45px;
