@@ -28,7 +28,6 @@ const usePrevious = (value: any) => {
   return ref.current
 }
 
-
 const options = {
   years: Array.from(Array(100).keys()).map((n: number) => (moment().year() - 18) - n),
   months: Array.from(Array(12).keys()),
@@ -67,26 +66,28 @@ const DateOfBirthPicker = ({
   })
 
   const handleValueChange = (key: string) => (value: any) => {
-    setState({
-      ...state,
-      [key]: value,
-    })
-
     const date = moment({
       year: key === 'year' ? value : state.year,
       month: key === 'month' ? value : state.month,
       day: key === 'day' ? value : state.day,
-    }).toDate()
+    })
 
-    if (onValueChange) {
-      onValueChange(date)
+    if (date.isValid()) {
+      setState({
+        ...state,
+        [key]: value,
+      })
+
+      if (onValueChange) {
+        onValueChange(date.toDate())
+      }
     }
   }
 
   return (
     <Container>
       <Picker width='25%' selectedValue={parsedDate.date()} onValueChange={handleValueChange('day')}>
-        {options.days.map(day => <Picker.Item key={day} label={moment({ day }).format('DD')} value={day}/>)}
+        {options.days.map(day => <Picker.Item key={day} label={moment({ month: 0, day }).format('DD')} value={day}/>)}
       </Picker>
       <Picker width='50%' selectedValue={parsedDate.month()} onValueChange={handleValueChange('month')}>
         {options.months.map(month => <Picker.Item key={month} label={moment({ month }).format('MMMM')} value={month}/>)}
