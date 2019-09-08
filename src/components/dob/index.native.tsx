@@ -43,11 +43,7 @@ const DateOfBirthPicker = ({
   onValueChange: (value: Date) => void,
   selectedValue: string,
 }) => {
-  if (!selectedValue) {
-    return
-  }
-
-  const parsedDate = moment(selectedValue)
+  const parsedDate = selectedValue ? moment(selectedValue) : moment(defaultDate)
   const hasUpdated = useCompare(selectedValue)
   const [state, setState] = useState<State>({
     year: 0,
