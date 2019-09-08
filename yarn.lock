@@ -1846,9 +1846,9 @@
     loader-utils "^1.2.3"
 
 "@trueme/design-system@^0.1.23":
-  version "0.1.22"
-  resolved "https://registry.yarnpkg.com/@trueme/design-system/-/design-system-0.1.22.tgz#6450d98e8327f83a91ebd27aa0428af73fd4b8d5"
-  integrity sha512-vQeG/SSkO1k2bArNo4h4tAH+enHQF9WCPQQv0wI+r8OY48K9fLtcrpkS4o1WOV7l883h5ZhLAuFMd53dXnTY6g==
+  version "0.1.23"
+  resolved "https://registry.yarnpkg.com/@trueme/design-system/-/design-system-0.1.23.tgz#2c45db7573de79dbad4f654a832ac62aff8e7348"
+  integrity sha512-0AUS+jDRMkrmwoUhI/23FSzWhWoae6Om6ofJj/5SQhM4kiUJrKc1cBonY2Wp90ZSO63Ty8ydXwbHgk07yKwvJg==
   dependencies:
     "@types/react" "^16.8.23"
     "@types/styled-components" "^4.1.18"
@@ -8339,6 +8339,11 @@ mocha@^6.1.4:
     yargs "13.2.2"
     yargs-parser "13.0.0"
     yargs-unparser "1.5.0"
+
+moment@^2.24.0:
+  version "2.24.0"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
+  integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
 
 move-concurrently@^1.0.1:
   version "1.0.1"

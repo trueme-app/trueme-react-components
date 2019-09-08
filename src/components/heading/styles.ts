@@ -1,5 +1,5 @@
-import { css } from 'styled-components'
 import { ThemeProps } from '@trueme/design-system'
+import { css } from 'styled-components'
 import { HeadingProps } from './shared'
 
 export const textStyles = css<ThemeProps & HeadingProps>`
