@@ -58,6 +58,10 @@ const HeightPicker = ({
   onValueChange: (value: number) => void,
   selectedValue: number,
 }) => {
+  if (!selectedValue) {
+    selectedValue = defaultHeight
+  }
+
   const hasUpdated = useCompare(selectedValue)
   const [state, setState] = useState<State>({
     value: 0,
