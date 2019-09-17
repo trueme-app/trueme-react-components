@@ -19,7 +19,7 @@
     "jsx": "react",
     "rootDirs": ["src", "stories"],
     "sourceMap": true,
-    "types": [ "node" ]
+    "types": ["jest", "node"]
   },
   "include": [
     "src/*",

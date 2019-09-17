@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Picker from '../picker/index.native'
+import { convertCmToFeetInches } from './conversion'
 
 export interface HeightProps {
   width: number | string
@@ -7,7 +8,7 @@ export interface HeightProps {
   onValueChange: (value: number) => void
 }
 
-interface Height {
+export interface Height {
   label: string
   value: number
 }
@@ -30,24 +31,10 @@ const usePrevious = (value: any) => {
 }
 
 const startingHeight = 55
-const factor = 30.48
-const inch = 2.54
 
-const options: Height[] = Array.from(Array(200).keys())
+const options: Height[] = Array.from(Array(226).keys())
   .filter((n: number) => n >= startingHeight)
-  .map((n: number) => {
-    const feetInches = (n / factor)
-    .toFixed(2)
-    .split('')
-    .filter((value: string) => value !== '.')
-
-    const formattedHeight = feetInches.slice(0, 2).join(`'`)
-
-    return {
-      label: `${Math.floor(n % inch) !== 0 ? `${n}cm` : `${n}cm (${formattedHeight})`}`,
-      value: n,
-    }
-  })
+  .map(convertCmToFeetInches)
 
 const defaultHeight = 178
 

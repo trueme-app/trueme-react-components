@@ -1,6 +1,6 @@
 {
   "name": "@trueme/react-components",
-  "version": "0.1.32",
+  "version": "0.1.33",
   "repository": "https://github.com/trueme-app/trueme-react-components",
   "author": "David Johnson <david@trueme.app>",
   "license": "MIT",
@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@trueme/design-system": "^0.1.23",
-    "@types/jest": "^24.0.15",
+    "@types/jest": "^24.0.18",
     "@types/node": "12.6.8",
     "@types/react": "^16.8.23",
     "@types/react-dom": "16.8.4",
@@ -35,7 +35,7 @@
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-env": "^7.5.4",
     "@babel/preset-react": "^7.0.0",
-    "@babel/preset-typescript": "^7.3.3",
+    "@babel/preset-typescript": "^7.6.0",
     "@storybook/addon-actions": "^5.1.9",
     "@storybook/addon-info": "^5.1.9",
     "@storybook/addon-knobs": "^5.1.9",
@@ -50,17 +50,19 @@
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.6",
     "file-loader": "^4.1.0",
-    "jest": "^24.8.0",
+    "jest": "^24.9.0",
+    "moment": "^2.24.0",
     "react-docgen-typescript-loader": "^3.1.0",
+    "react-native": "0.60.5",
     "react-test-renderer": "^16.8.6",
     "storybook-addon-jsx": "^7.1.5",
     "storybook-addon-styled-component-theme": "^1.2.4",
-    "ts-jest": "^24.0.2",
+    "ts-jest": "^24.1.0",
     "tslint": "^5.18.0",
     "tslint-eslint-rules": "^5.4.0",
     "tslint-react": "^4.0.0",
     "tslint-react-recommended": "^1.0.15",
-    "typescript": "3.5.3",
+    "typescript": "^3.6.3",
     "url-loader": "^2.1.0"
   },
   "resolutions": {
@@ -70,6 +72,7 @@
     "react-dom": "^16.8.6"
   },
   "peerDependencies": {
-    "moment": "^2.24.0"
+    "moment": "^2.24.0",
+    "react-native": "0.60.5"
   }
 }
