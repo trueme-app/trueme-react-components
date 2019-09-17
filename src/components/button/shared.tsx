@@ -4,7 +4,7 @@ import { ColourVariant } from '../../types'
 export interface ButtonProps {
   variant: ColourVariant
   shape?: 'pill' | 'circle' | 'square'
-  size?: 'normal' | 'small'
+  size?: 'normal' | 'small' | 'large'
   autoWidth?: boolean
   reversed?: boolean
   disabled?: boolean

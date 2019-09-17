@@ -13,16 +13,23 @@ const StyledButton = styled.button<ButtonProps & ButtonHTMLProps>`
     switch (shape) {
       case 'square':
       case 'circle':
-        if (size === 'small') {
-          return `
-            height: 32px;
-            width: 32px;
-          `
+        switch (size) {
+          case 'small':
+            return `
+              height: 32;
+              width: 32;
+            `
+          case 'large':
+            return `
+              height: 64;
+              width: 64;
+            `
+          default:
+            return `
+              height: 45;
+              width: 45;
+            `
         }
-        return `
-          height: 45px;
-          width: 45px;
-        `
       case 'pill':
       default:
         if (!autoWidth) {

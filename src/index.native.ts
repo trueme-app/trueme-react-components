@@ -1,5 +1,6 @@
 import Button from './components/button/index.native'
 import DateOfBirthPicker from './components/dob/index.native'
+import FilePicker from './components/file-picker/index.native'
 import Checkbox from './components/forms/checkbox/index.native'
 import TextInput from './components/forms/text-input/index.native'
 import Heading from './components/heading/index.native'
@@ -12,6 +13,7 @@ export {
   Checkbox,
   DateOfBirthPicker,
   Dots,
+  FilePicker,
   Heading,
   HeightPicker,
   Picker,

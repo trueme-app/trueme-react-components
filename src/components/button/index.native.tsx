@@ -22,16 +22,23 @@ const ButtonFront = styled(View)<ButtonProps>`
     switch (shape) {
       case 'square':
       case 'circle':
-        if (size === 'small') {
-          return `
-            height: 32;
-            width: 32;
-          `
+        switch (size) {
+          case 'small':
+            return `
+              height: 32;
+              width: 32;
+            `
+          case 'large':
+            return `
+              height: 64;
+              width: 64;
+            `
+          default:
+            return `
+              height: 45;
+              width: 45;
+            `
         }
-        return `
-          height: 45;
-          width: 45;
-        `
       default:
     }
   }}
