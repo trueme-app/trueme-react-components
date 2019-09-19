@@ -16,18 +16,18 @@ const StyledButton = styled.button<ButtonProps & ButtonHTMLProps>`
         switch (size) {
           case 'small':
             return `
-              height: 32;
-              width: 32;
+              height: 32px;
+              width: 32px;
             `
           case 'large':
             return `
-              height: 64;
-              width: 64;
+              height: 64px;
+              width: 64px;
             `
           default:
             return `
-              height: 45;
-              width: 45;
+              height: 45px;
+              width: 45px;
             `
         }
       case 'pill':
