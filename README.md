@@ -20,4 +20,22 @@ npm install @trueme/react-components
 
 Component List
 ---
-* Button
+* Buttons
+  * Pill
+  * Square
+  * Circle
+* File Picker
+* Forms
+  * Text Input
+    * Password
+    * 6-digit verification
+  * Checkbox
+* Select/Pickers
+  * Date of Birth picker
+  * Height picker
+* Slider
+  * Dots
+
+Storybook
+---
+View the Storybook: https://trueme-app.github.io/trueme-react-components/
