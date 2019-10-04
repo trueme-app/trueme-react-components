@@ -3,7 +3,7 @@ import { css } from 'styled-components'
 import { HeadingProps } from './shared'
 
 export const textStyles = css<ThemeProps & HeadingProps>`
-  color: ${({ theme: { colours }}) => colours.text};
+  color: ${({ variant, swatch, theme: { colours }}) => variant && swatch ? colours[variant][swatch] : colours.text};
   font-family: ${({ level, theme: { typography }}) => typography.headings[`h${level}`].font};
   font-size: ${({ level, theme: { typography }}) => typography.headings[`h${level}`].size};
   font-weight: ${({ level, theme: { typography }}) => typography.headings[`h${level}`].fontWeight};

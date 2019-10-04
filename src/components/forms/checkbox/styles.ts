@@ -1,14 +1,14 @@
 import { ThemeProps } from '@trueme/design-system'
 import { css } from 'styled-components'
-import { InputProps } from './shared'
+import { CheckboxProps } from './shared'
 
-export const containerStyles = css<ThemeProps & InputProps>`
+export const containerStyles = css<ThemeProps & CheckboxProps>`
   display: flex;
   flex-direction: row;
   align-items: center;
 `
 
-export const checkboxStyles = css<ThemeProps & InputProps>`
+export const checkboxStyles = css<ThemeProps & CheckboxProps>`
   ${({ checked, theme: { borders, colours, spacing }}) => {
     return `
       display: flex;
@@ -23,7 +23,7 @@ export const checkboxStyles = css<ThemeProps & InputProps>`
   }}
 `
 
-export const labelStyles = css<ThemeProps & InputProps>`
+export const labelStyles = css<ThemeProps & CheckboxProps>`
   ${({ theme: { typography }}) => {
     return `
       font-family: ${typography.body.base.font};

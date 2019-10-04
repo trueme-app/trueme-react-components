@@ -57,6 +57,7 @@ storiesOf('Forms/Text Input', module)
   .add('with placeholder', () => <TextInput placeholder='This is a placeholder'/>)
   .add('required', () => <TextInput required/>)
   .add('password', () => <TextInput type='password'/>)
+  .add('textarea', () => <TextInput rows={4} multiline={true}/>)
 
 storiesOf('Forms/Checkbox', module)
   .add('default', () => <Checkbox>Check me</Checkbox>)

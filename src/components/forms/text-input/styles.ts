@@ -1,34 +1,34 @@
 import { css } from 'styled-components'
 import { ThemeProps } from '@trueme/design-system'
-import { InputProps, InputReadOnlyProps, VerificationCodeProps } from './shared'
+import { TextInputProps, InputReadOnlyProps, VerificationCodeProps } from './shared'
 
-export const borderStyles = css<ThemeProps & InputProps & VerificationCodeProps>`
-  ${({ valid, verificationCode, theme: { borders, colours }}) => {
+export const borderStyles = css<ThemeProps & TextInputProps & VerificationCodeProps>`
+  ${({ showBorder, valid, verificationCode, theme: { borders, colours }}) => {
     if (verificationCode) {
       return `width: 100%`
     }
     let borderColor
-    switch(valid) {
+    switch (valid) {
       case true:
         borderColor = colours.valid
-        break;
+        break
       case false:
         borderColor = colours.invalid
-        break;
+        break
       default:
         borderColor = colours.text
     }
 
     return `
       border-bottom-color: ${borderColor};
-      border-bottom-width: ${borders.width.default};
+      border-bottom-width: ${showBorder ? borders.width.default : 0};
       width: 100%;
     `
   }}
 `
 
-export const inputStyles = css<ThemeProps & InputProps & InputReadOnlyProps & VerificationCodeProps>`
-  ${({ dashGap, dashWidth, digits, isPassword, verificationCode, theme: { borders, colours, spacing, typography }}) => {
+export const inputStyles = css<ThemeProps & TextInputProps & InputReadOnlyProps & VerificationCodeProps>`
+  ${({ dashGap, dashWidth, digits, isPassword, multiline, rows, verificationCode, theme: { colours, spacing, typography }}) => {
     return `
       border: 0;
       color: ${colours.text};
@@ -42,6 +42,9 @@ export const inputStyles = css<ThemeProps & InputProps & InputReadOnlyProps & Ve
         padding-left: ${((dashWidth! - dashGap!) / digits!).toFixed(2)};
         margin-right: ${-((dashWidth! - dashGap!)).toFixed(2)};
         letter-spacing: ${(dashWidth! - dashGap! - 2.6).toFixed(2)};
+      ` : ``)}
+      ${(multiline && rows ? `
+        height: ${typography.headings.h2.calculateParagraphHeight(rows, parseInt(spacing.default, 10) * 2)}
       ` : ``)}
     `
   }}

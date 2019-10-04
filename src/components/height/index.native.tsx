@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import Picker from '../picker/index.native'
 import { convertCmToFeetInches } from './conversion'
 
-export interface HeightProps {
+export interface HeightPickerProps {
   width: number | string
   selectedValue: number
   onValueChange: (value: number) => void

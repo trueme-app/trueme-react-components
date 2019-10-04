@@ -1,17 +1,17 @@
 import { ISystem } from '@trueme/design-system'
 import React, { ReactNode } from 'react'
-import { Picker, PickerProps } from 'react-native'
+import { Picker, PickerProps as PickerNativeProps } from 'react-native'
 import styled, { ThemeConsumer } from 'styled-components/native'
 import { pickerStyles } from './styles'
 
-export interface PickerWrapperProps {
+interface PickerBaseProps {
   width: number | string
   children: ReactNode | ReactNode[]
 }
 
-export type DOBProps = PickerProps & PickerWrapperProps
+export type PickerProps = PickerBaseProps & PickerNativeProps
 
-const StyledPicker = styled(Picker)<DOBProps>`
+const StyledPicker = styled(Picker)<PickerProps>`
   ${pickerStyles}
 `
 

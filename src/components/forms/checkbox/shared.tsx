@@ -1,16 +1,16 @@
 import React, { ComponentType, FC, useEffect, useState } from 'react'
 
-export interface InputProps {
+export interface CheckboxProps {
   checked?: boolean
   onChange?: (...args: any[]) => void
 }
 export const withCheckbox = <T extends object>(
-  StyledCheckbox: ComponentType<T & InputProps>,
-): FC<T & InputProps> => ({
+  StyledCheckbox: ComponentType<T & CheckboxProps>,
+): FC<T & CheckboxProps> => ({
   checked = false,
   onChange,
   ...props
-}: T & InputProps) => {
+}: T & CheckboxProps) => {
   const [state, setState] = useState({
     isChecked: checked,
   })

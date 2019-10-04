@@ -1,7 +1,7 @@
 import { css } from 'styled-components'
-import { DOBProps } from './index.native'
+import { PickerProps } from './index.native'
 
-export const pickerStyles = css<DOBProps>`
+export const pickerStyles = css<PickerProps>`
   ${({ width, theme: { typography, spacing }}) => {
     return `
       font-family: ${typography.body.base.font};

@@ -1,6 +1,6 @@
 import React, { FC, HTMLAttributes } from 'react'
 import styled, { css } from 'styled-components'
-import { InputProps, withCheckbox } from './shared'
+import { CheckboxProps, withCheckbox } from './shared'
 import { checkboxStyles, containerStyles, labelStyles } from './styles'
 
 const dimensions = css`
@@ -30,7 +30,7 @@ const Label = styled.label`
   ${labelStyles}
 `
 
-const Checkbox: FC<InputProps> = ({ children, onChange, ...props}) => (
+const Checkbox: FC<CheckboxProps> = ({ children, onChange, ...props}) => (
   <Container onClick={onChange} {...props}>
     <HiddenCheckbox/>
     <StyledCheckbox {...props}>

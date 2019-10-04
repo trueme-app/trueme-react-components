@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import { Text, TouchableHighlight, View } from 'react-native'
 import Svg, { Path } from 'react-native-svg'
 import styled, { css } from 'styled-components'
-import { InputProps, withCheckbox } from './shared'
+import { CheckboxProps, withCheckbox } from './shared'
 import { attrStyles, checkboxStyles, containerStyles, labelStyles } from './styles'
 
 const dimensions = css`
@@ -28,7 +28,7 @@ const Label = styled(Text)`
   ${labelStyles}
 `
 
-const Checkbox: FC<InputProps> = ({ children, onChange, ...props}) => (
+const Checkbox: FC<CheckboxProps> = ({ children, onChange, ...props}) => (
   <Container onPress={onChange}>
     <Wrapper>
       <StyledCheckbox {...props}>

@@ -8,6 +8,7 @@ export interface ButtonProps {
   autoWidth?: boolean
   reversed?: boolean
   disabled?: boolean
+  shadow?: boolean
 }
 
 const BaseButton = <T extends object>(
@@ -19,6 +20,7 @@ const BaseButton = <T extends object>(
   reversed = false,
   autoWidth = true,
   disabled = false,
+  shadow = false,
   ...props
 }: T & ButtonProps) => (
   <StyledButton
@@ -28,6 +30,7 @@ const BaseButton = <T extends object>(
     reversed={reversed}
     shape={shape}
     variant={variant}
+    shadow={shadow}
     {...props as T}/>
 )
 

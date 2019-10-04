@@ -6,6 +6,16 @@ export const containerStyles = css<ThemeProps & ButtonProps>`
   border-radius: ${({ shape, theme: { borders }}) => shape === 'square' ? borders.radius.default : borders.radius.xl};
   border-color: ${({ disabled, variant, theme: { colours }}) => disabled ? colours.disabled.background : colours[variant].base};
   border-width: ${({ theme: { borders }}) => borders.width.default};
+  ${({ shadow }) => shadow ? `
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+  shadowColor: #000;
+  shadowOffset: {
+    width: 0,
+    height: 4,
+  };
+  shadowOpacity: 0.1;
+  shadowRadius: 4;
+  ` : ``}
 
   ${({ variant, disabled, reversed, theme: { colours } }) => {
     if (reversed) {

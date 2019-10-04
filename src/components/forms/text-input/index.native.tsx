@@ -1,10 +1,9 @@
-import { ISystem } from '@trueme/design-system'
 import React, { Component } from 'react'
 import { TextInput, View } from 'react-native'
-import styled, { ThemeConsumer } from 'styled-components/native'
 import Dash from 'react-native-dash'
+import styled, { ThemeConsumer } from 'styled-components/native'
 import Button from '../../button/index.native'
-import { withTextInput, InputProps } from './shared'
+import { TextInputProps, withTextInput } from './shared'
 import { borderStyles, inputStyles, passwordToggleStyles } from './styles'
 
 const StyledView = styled(View)`
@@ -19,7 +18,7 @@ const ButtonContainer = styled(View)`
   ${passwordToggleStyles}
 `
 
-type State = {
+interface State {
   width: number
   height: number
   x: number
@@ -29,7 +28,7 @@ type State = {
   isSecureTextEntry: boolean
 }
 
-class StyledContainer extends Component<InputProps, State> {
+class StyledContainer extends Component<TextInputProps, State> {
   readonly state = {
     width: 1,
     height: 1,

@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import Picker from '../picker/index.native'
 import { Container } from './styles'
 
-export interface DOBProps {
+export interface DateOfBirthPickerProps {
   width: number | string
   selectedValue: Date
   onValueChange: (value: Date) => void
