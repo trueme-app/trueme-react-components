@@ -1,5 +1,5 @@
 import { action } from '@storybook/addon-actions'
-import { boolean, select, withKnobs } from '@storybook/addon-knobs/react'
+import { boolean, select, withKnobs } from '@storybook/addon-knobs'
 import { storiesOf } from '@storybook/react'
 import React from 'react'
 import ChevronRight from '../assets/icons/icon-chevron-right.svg'
@@ -18,6 +18,8 @@ const variants = {
   Quaternary: 'quaternary',
   Quinary: 'quinary',
   Senary: 'senary',
+  Septenary: 'septenary',
+  Monochrome: 'monochrome',
 }
 
 storiesOf('Button', module)
@@ -26,19 +28,19 @@ storiesOf('Button', module)
       const size = select('Size', sizes, 'normal', 'size') as 'small' | 'normal' | 'large' | undefined
       const reversed = boolean('Reversed', false)
       const autoWidth = boolean('Auto Width', false)
-      const variant = select('Variant', variants, 'primary', 'variant') as 'primary' | 'secondary' | 'quaternary' | 'quinary' | 'senary'
+      const variant = select('Variant', variants, 'primary', 'variant') as 'primary' | 'secondary' | 'quaternary' | 'quinary' | 'senary' | 'septenary' | 'monochrome'
       return (<Button shape='square' variant={variant} size={size} reversed={reversed} autoWidth={autoWidth} onClick={action('clicked')}>1</Button>)
     })
     .add('pill with text', () => {
       const size = select('Size', sizes, 'normal', 'size') as 'small' | 'normal' | undefined
       const reversed = boolean('Reversed', false)
       const autoWidth = boolean('Auto Width', false)
-      const variant = select('Variant', variants, 'primary', 'variant') as 'primary' | 'secondary' | 'quaternary' | 'quinary' | 'senary'
+      const variant = select('Variant', variants, 'primary', 'variant') as 'primary' | 'secondary' | 'quaternary' | 'quinary' | 'senary' | 'septenary' | 'monochrome'
       return (<Button variant={variant} size={size} reversed={reversed} autoWidth={autoWidth} onClick={action('clicked')}>Sign up for new beginnings</Button>)
     })
     .add('circle with icon', () => {
       const reversed = boolean('Reversed', false)
-      const variant = select('Variant', variants, 'primary', 'variant') as 'primary' | 'secondary' | 'quaternary' | 'quinary' | 'senary'
+      const variant = select('Variant', variants, 'primary', 'variant') as 'primary' | 'secondary' | 'quaternary' | 'quinary' | 'senary' | 'septenary' | 'monochrome'
       return (<Button shape='circle' variant={variant} reversed={reversed} onClick={action('clicked')}><ChevronRight/></Button>)
     })
 
