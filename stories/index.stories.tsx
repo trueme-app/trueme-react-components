@@ -43,6 +43,11 @@ storiesOf('Button', module)
       const variant = select('Variant', variants, 'primary', 'variant') as 'primary' | 'secondary' | 'quaternary' | 'quinary' | 'senary' | 'septenary' | 'monochrome'
       return (<Button shape='circle' variant={variant} reversed={reversed} onClick={action('clicked')}><ChevronRight/></Button>)
     })
+    .add('circle with icon (transparent)', () => {
+      const transparent = boolean('Transparent', false)
+      const variant = select('Variant', variants, 'primary', 'variant') as 'primary' | 'secondary' | 'quaternary' | 'quinary' | 'senary' | 'septenary' | 'monochrome'
+      return (<Button shape='circle' variant={variant} transparent={transparent} onClick={action('clicked')}><ChevronRight/></Button>)
+    })
 
 storiesOf('Heading', module)
   .add('h1', () => <Heading level={1}>Welcome to new beginnings</Heading>)

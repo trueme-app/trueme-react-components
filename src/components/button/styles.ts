@@ -4,7 +4,15 @@ import { ButtonProps } from './shared'
 
 export const containerStyles = css<ThemeProps & ButtonProps>`
   border-radius: ${({ shape, theme: { borders }}) => shape === 'square' ? borders.radius.default : borders.radius.xl};
-  border-color: ${({ disabled, variant, theme: { colours }}) => disabled ? colours.disabled.background : colours[variant].base};
+  border-color: ${({ disabled, transparent, variant, theme: { colours }}) => {
+    if (disabled) {
+      return colours.disabled.background
+    }
+    if (transparent) {
+      return `transparent`
+    }
+    return colours[variant].base
+  }};
   border-width: ${({ theme: { borders }}) => borders.width.default};
   ${({ shadow }) => shadow ? `
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
@@ -17,8 +25,8 @@ export const containerStyles = css<ThemeProps & ButtonProps>`
   shadowRadius: 4;
   ` : ``}
 
-  ${({ variant, disabled, reversed, theme: { colours } }) => {
-    if (reversed) {
+  ${({ variant, transparent, disabled, reversed, theme: { colours } }) => {
+    if (reversed || transparent) {
       return `
         background-color: transparent;
       `
