@@ -2,7 +2,20 @@ import { IColourDefinition, ThemeProps } from '@trueme/design-system'
 import { css } from 'styled-components'
 import { ButtonProps } from './shared'
 
+const getBackgroundColor = (colours: any, variant: string, reversed: boolean, transparent: boolean, disabled: boolean) => {
+  if (reversed || transparent) {
+    return 'transparent'
+  } else {
+    if (disabled) {
+      return colours.disabled.background
+    } else {
+      return colours[variant].base
+    }
+  }
+}
+
 export const containerStyles = css<ThemeProps & ButtonProps>`
+  background-color: ${({ disabled, reversed, transparent, variant, theme: { colours }}) => getBackgroundColor(colours, variant, !!reversed, !!transparent, !!disabled)}
   border-width: ${({ borderSize, theme: { borders }}) => borders.width[borderSize || 'default']};
   border-radius: ${({ shape, theme: { borders }}) => shape === 'square' ? borders.radius.default : borders.radius.xl};
   border-color: ${({ disabled, borderVariant, transparent, variant, theme: { colours }}) => {
@@ -24,20 +37,6 @@ export const containerStyles = css<ThemeProps & ButtonProps>`
   shadowOpacity: 0.1;
   shadowRadius: 4;
   ` : ``}
-
-  ${({ variant, transparent, disabled, reversed, theme: { colours } }) => {
-    if (reversed || transparent) {
-      return `
-        background-color: transparent;
-      `
-    } else {
-      if (disabled) {
-        return `background-color: ${colours.disabled.background};`
-      }
-
-      return `background-color: ${colours[variant].base};`
-    }
-  }}
 `
 
 export const buttonStyles = css<ThemeProps & ButtonProps>`
@@ -88,9 +87,24 @@ export const textStyles = css<ThemeProps & ButtonProps>`
 `
 
 export const attrStyles = (props: ThemeProps & ButtonProps) => {
-  const { variant, theme: { colours } } = props
-  const colour: IColourDefinition = colours[variant!] as IColourDefinition
+  const { variant, disabled, reversed, transparent, theme: { colours } } = props
+  const colourDisabled: IColourDefinition | undefined = colours.disabled
+  const colourVariant: IColourDefinition | undefined = colours[variant]
+
+  let colour: string | undefined
+  if (reversed || transparent) {
+    colour = 'transparent'
+  } else {
+    if (disabled && colourDisabled) {
+      colour = colourDisabled.background
+    } else {
+      if (colourVariant) {
+        colour = colourVariant.light
+      }
+    }
+  }
+
   return {
-    underlayColor: colour.light,
+    underlayColor: colour,
   }
 }
