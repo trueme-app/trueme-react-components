@@ -3,8 +3,10 @@ import { ColourVariant } from '../../types'
 
 export interface ButtonProps {
   variant: ColourVariant
+  borderVariant?: ColourVariant | undefined
   shape?: 'pill' | 'circle' | 'square'
   size?: 'normal' | 'small' | 'large'
+  borderSize?: 'default' | 'md' | 'lg'
   autoWidth?: boolean
   reversed?: boolean
   disabled?: boolean
@@ -18,11 +20,13 @@ const BaseButton = <T extends object>(
   variant = 'primary',
   shape = 'pill',
   size = 'normal',
+  borderSize = 'default',
   reversed = false,
   autoWidth = true,
   disabled = false,
   shadow = false,
   transparent = false,
+  borderVariant,
   ...props
 }: T & ButtonProps) => (
   <StyledButton
@@ -34,6 +38,8 @@ const BaseButton = <T extends object>(
     variant={variant}
     shadow={shadow}
     transparent={transparent}
+    borderVariant={borderVariant ? borderVariant : variant}
+    borderSize={borderSize}
     {...props as T}/>
 )
 

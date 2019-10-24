@@ -3,17 +3,17 @@ import { css } from 'styled-components'
 import { ButtonProps } from './shared'
 
 export const containerStyles = css<ThemeProps & ButtonProps>`
+  border-width: ${({ borderSize, theme: { borders }}) => borders.width[borderSize || 'default']};
   border-radius: ${({ shape, theme: { borders }}) => shape === 'square' ? borders.radius.default : borders.radius.xl};
-  border-color: ${({ disabled, transparent, variant, theme: { colours }}) => {
+  border-color: ${({ disabled, borderVariant, transparent, variant, theme: { colours }}) => {
     if (disabled) {
       return colours.disabled.background
     }
     if (transparent) {
       return `transparent`
     }
-    return colours[variant].base
+    return colours[borderVariant || variant].base
   }};
-  border-width: ${({ theme: { borders }}) => borders.width.default};
   ${({ shadow }) => shadow ? `
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
   shadowColor: #000;

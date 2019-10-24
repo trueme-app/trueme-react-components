@@ -6,6 +6,7 @@ import { buttonStyles, containerStyles, textStyles } from './styles'
 interface ButtonHTMLProps extends HTMLAttributes<HTMLButtonElement> {}
 
 const StyledButton = styled.button<ButtonProps & ButtonHTMLProps>`
+  box-sizing: content-box;
   ${containerStyles}
   ${buttonStyles}
   ${textStyles}

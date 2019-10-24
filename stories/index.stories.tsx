@@ -11,6 +11,12 @@ const sizes = {
   Large: 'large',
 }
 
+const borderSizes = {
+  Default: 'default',
+  Medium: 'md',
+  Large: 'lg',
+}
+
 const variants = {
   Primary: 'primary',
   Secondary: 'secondary',
@@ -25,23 +31,32 @@ const variants = {
 storiesOf('Button', module)
     .addDecorator(withKnobs)
     .add('square with text', () => {
+      const borderSize = select('Border Size', borderSizes, 'default', 'borderSize') as 'default' | 'md' | 'lg'
       const size = select('Size', sizes, 'normal', 'size') as 'small' | 'normal' | 'large' | undefined
       const reversed = boolean('Reversed', false)
       const autoWidth = boolean('Auto Width', false)
       const variant = select('Variant', variants, 'primary', 'variant') as 'primary' | 'secondary' | 'quaternary' | 'quinary' | 'senary' | 'septenary' | 'monochrome'
-      return (<Button shape='square' variant={variant} size={size} reversed={reversed} autoWidth={autoWidth} onClick={action('clicked')}>1</Button>)
+      const borderVariant = select('Variant', variants, 'primary', 'variant') as 'primary' | 'secondary' | 'quaternary' | 'quinary' | 'senary' | 'septenary' | 'monochrome'
+      return (<Button borderSize={borderSize} borderVariant={borderVariant} shape='square' variant={variant} size={size} reversed={reversed} autoWidth={autoWidth} onClick={action('clicked')}>1</Button>)
     })
     .add('pill with text', () => {
       const size = select('Size', sizes, 'normal', 'size') as 'small' | 'normal' | undefined
       const reversed = boolean('Reversed', false)
       const autoWidth = boolean('Auto Width', false)
       const variant = select('Variant', variants, 'primary', 'variant') as 'primary' | 'secondary' | 'quaternary' | 'quinary' | 'senary' | 'septenary' | 'monochrome'
-      return (<Button variant={variant} size={size} reversed={reversed} autoWidth={autoWidth} onClick={action('clicked')}>Sign up for new beginnings</Button>)
+      const borderVariant = select('Variant', variants, 'primary', 'variant') as 'primary' | 'secondary' | 'quaternary' | 'quinary' | 'senary' | 'septenary' | 'monochrome'
+      const borderSize = select('Border Size', borderSizes, 'default', 'borderSize') as 'default' | 'md' | 'lg'
+
+      return (<Button borderVariant={borderVariant} borderSize={borderSize} variant={variant} size={size} reversed={reversed} autoWidth={autoWidth} onClick={action('clicked')}>Sign up for new beginnings</Button>)
     })
     .add('circle with icon', () => {
       const reversed = boolean('Reversed', false)
       const variant = select('Variant', variants, 'primary', 'variant') as 'primary' | 'secondary' | 'quaternary' | 'quinary' | 'senary' | 'septenary' | 'monochrome'
-      return (<Button shape='circle' variant={variant} reversed={reversed} onClick={action('clicked')}><ChevronRight/></Button>)
+      const borderVariant = select('Border Variant', variants, 'primary', 'variant') as 'primary' | 'secondary' | 'quaternary' | 'quinary' | 'senary' | 'septenary' | 'monochrome'
+      const borderSize = select('BorderSize', borderSizes, 'default', 'borderSize') as 'default' | 'md' | 'lg'
+      const size = select('Size', sizes, 'normal', 'size') as 'small' | 'normal' | undefined
+
+      return (<Button borderVariant={borderVariant} borderSize={borderSize} size={size} shape='circle' variant={variant} reversed={reversed} onClick={action('clicked')}><ChevronRight/></Button>)
     })
     .add('circle with icon (transparent)', () => {
       const transparent = boolean('Transparent', false)
