@@ -41,7 +41,7 @@ export const inputStyles = css<ThemeProps & TextInputProps & InputReadOnlyProps 
         margin-left: ${((dashWidth! - dashGap!) / digits!).toFixed(2)};
         padding-left: ${((dashWidth! - dashGap!) / digits!).toFixed(2)};
         margin-right: ${-((dashWidth! - dashGap!)).toFixed(2)};
-        letter-spacing: ${(dashWidth! - dashGap! - 2.6).toFixed(2)};
+        letter-spacing: ${(dashWidth! - dashGap!).toFixed(2)};
       ` : ``)}
       ${(multiline && rows ? `
         height: ${typography.headings.h2.calculateParagraphHeight(rows, parseInt(spacing.default, 10) * 2)}
