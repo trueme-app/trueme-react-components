@@ -9,7 +9,7 @@ export const textStyles = css<ThemeProps & HeadingProps>`
   font-weight: ${({ level, theme: { typography }}) => typography.headings[`h${level}`].fontWeight};
   line-height: ${({ level, theme: { typography }}) => typography.headings[`h${level}`].lineHeight};
   padding-right: ${({ theme: { spacing }}) => spacing.xl};
-  text-align: left;
+  text-align: ${({ align }) => align};
 
   ${({ theme: { spacing }}) => {
     return `
