@@ -40,7 +40,8 @@ const BaseButton = <T extends object>(
     transparent={transparent}
     borderVariant={borderVariant ? borderVariant : variant}
     borderSize={borderSize}
-    {...props as T}/>
+    {...props as T}
+  />
 )
 
 export default BaseButton
