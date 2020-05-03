@@ -6,9 +6,9 @@ import { CheckboxProps, withCheckbox } from './shared'
 import { attrStyles, checkboxStyles, containerStyles, labelStyles } from './styles'
 
 const dimensions = css`
-  width: 45;
-  height: 45;
-  border-radius: 45;
+  width: 45px;
+  height: 45px;
+  border-radius: 45px;
 `
 
 const Container = styled(TouchableHighlight).attrs(attrStyles)`

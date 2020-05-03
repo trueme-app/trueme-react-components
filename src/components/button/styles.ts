@@ -35,7 +35,7 @@ export const containerStyles = css<ThemeProps & ButtonProps>`
     height: 4,
   };
   shadowOpacity: 0.1;
-  shadowRadius: 4;
+  shadowRadius: 4px;
   ` : ``}
 `
 
