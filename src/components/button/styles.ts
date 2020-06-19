@@ -1,3 +1,4 @@
+import { IColour } from './../../../../design-system/dist/types/index.d'
 import { IColourDefinition, ThemeProps } from '@trueme/design-system'
 import { css } from 'styled-components'
 import { ButtonProps } from './shared'
@@ -88,8 +89,8 @@ export const textStyles = css<ThemeProps & ButtonProps>`
 
 export const attrStyles = (props: ThemeProps & ButtonProps) => {
   const { variant, disabled, reversed, transparent, theme: { colours } } = props
-  const colourDisabled: IColourDefinition | undefined = colours.disabled
-  const colourVariant: IColourDefinition | undefined = colours[variant]
+  const colourDisabled = colours.disabled as IColourDefinition
+  const colourVariant = colours[variant] as IColourDefinition
 
   let colour: string | undefined
   if (reversed || transparent) {
