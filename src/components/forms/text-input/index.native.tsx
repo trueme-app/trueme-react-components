@@ -1,16 +1,17 @@
+import { ThemeProps } from '@trueme/design-system'
 import React, { Component } from 'react'
 import { TextInput, View } from 'react-native'
 import Dash from 'react-native-dash'
 import styled, { ThemeConsumer } from 'styled-components/native'
 import Button from '../../button/index.native'
-import { TextInputProps, withTextInput } from './shared'
+import { TextInputProps, InputReadOnlyProps, VerificationCodeProps, withTextInput } from './shared'
 import { borderStyles, inputStyles, passwordToggleStyles } from './styles'
 
 const StyledView = styled(View)`
   ${borderStyles};
 `
 
-const StyledTextInput = styled(TextInput)`
+const StyledTextInput = styled(TextInput)<VerificationCodeProps & InputReadOnlyProps>`
   ${inputStyles};
 `
 

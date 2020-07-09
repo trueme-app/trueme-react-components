@@ -21,7 +21,7 @@ export const withDots = <T extends DotsProps>(
   variant = 'primary',
   ...props
 }: T & DotsProps) => (
-  <StyledDots current={current} {...props as T}>
+  <StyledDots {...props as T}>
     {[...Array(total).keys()].map((n: number) => (<StyledDotsListItem key={`dot-list-item-${n}`} variant={variant} isActive={current === n}/>))}
   </StyledDots>
 )
