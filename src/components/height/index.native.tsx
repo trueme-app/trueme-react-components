@@ -62,7 +62,9 @@ const HeightPicker = ({
     }
   })
 
-  const handleValueChange = (value: number) => {
+  const handleValueChange = (itemValue: string | number) => {
+    const value = itemValue as number
+
     setState({
       ...state,
       value,

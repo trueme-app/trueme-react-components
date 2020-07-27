@@ -6,7 +6,7 @@
     },
     "downlevelIteration": true,
     "lib": ["es2017", "es7", "es6", "dom"],
-    "declaration": true,
+    "declaration": false,
     "outDir": "./dist",
     "target": "es5",
     "skipLibCheck": true,
