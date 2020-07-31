@@ -1,11 +1,10 @@
-import React, { ReactNode } from 'react'
-import { Text, TouchableHighlight } from 'react-native'
+import React, { FC } from 'react'
+import { TouchableHighlight } from 'react-native'
 import Svg, { Path } from 'react-native-svg'
 import styled from 'styled-components/native'
 import { attrStyles, pickerStyles } from './styles'
 
 export interface FilePickerProps {
-  children: ReactNode | boolean
   onPress: () => void
 }
 
@@ -13,7 +12,7 @@ const StyledPicker = styled(TouchableHighlight).attrs(attrStyles)<FilePickerProp
   ${pickerStyles}
 `
 
-const Component = (props: FilePickerProps) => (
+const Component: FC<FilePickerProps> = (props) => (
   <StyledPicker {...props}>
     {props.children ? props.children : (
       <Svg width={20} height={20} fill='none' {...props}>
