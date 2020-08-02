@@ -5,12 +5,12 @@ export const pickerStyles = css<FilePickerProps>`
   ${({ theme: { borders, colours, spacing }}) => {
     return `
       align-items: center;
+      aspect-ratio: 1;
       justify-content: center;
       border-color: ${colours.tertiary.default};
       border-radius: ${borders.radius.default};
       border-width: ${borders.width.default};
-      width: ${spacing.xxxl};
-      height: ${spacing.xxxl};
+      width: 100%;
     `
   }}
 `

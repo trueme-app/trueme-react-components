@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { TouchableHighlight } from 'react-native'
+import { TouchableOpacity } from 'react-native'
 import Svg, { Path } from 'react-native-svg'
 import styled from 'styled-components/native'
 import { attrStyles, pickerStyles } from './styles'
@@ -8,7 +8,7 @@ export interface FilePickerProps {
   onPress: () => void
 }
 
-const StyledPicker = styled(TouchableHighlight).attrs(attrStyles)<FilePickerProps>`
+const StyledPicker = styled(TouchableOpacity).attrs(attrStyles)<FilePickerProps>`
   ${pickerStyles}
 `
 

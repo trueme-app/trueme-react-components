@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { Text, TouchableHighlight, View } from 'react-native'
+import { Text, TouchableOpacity, View } from 'react-native'
 import Svg, { Path } from 'react-native-svg'
 import styled, { css } from 'styled-components'
 import { CheckboxProps, withCheckbox } from './shared'
@@ -11,7 +11,7 @@ const dimensions = css`
   border-radius: 45px;
 `
 
-const Container = styled(TouchableHighlight).attrs(attrStyles)`
+const Container = styled(TouchableOpacity).attrs(attrStyles)`
   ${containerStyles}
 `
 

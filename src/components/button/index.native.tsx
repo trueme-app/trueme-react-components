@@ -1,10 +1,10 @@
 import React from 'react'
-import { Text, TouchableHighlight, View } from 'react-native'
+import { Text, TouchableOpacity, View } from 'react-native'
 import styled from 'styled-components/native'
 import withButton, { ButtonProps } from './shared'
 import { attrStyles, buttonStyles, containerStyles, textStyles } from './styles'
 
-const StyledButton = styled(TouchableHighlight).attrs(attrStyles)<ButtonProps>`
+const StyledButton = styled(TouchableOpacity).attrs(attrStyles)<ButtonProps>`
   ${containerStyles}
 
   ${({ shape, autoWidth }) => {
