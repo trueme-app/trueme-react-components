@@ -26,6 +26,11 @@ const ButtonFront = styled(View)<ButtonProps>`
           return
         }
         switch (size) {
+          case 'tiny':
+            return `
+              height: 20px;
+              width: 20px;
+            `
           case 'small':
             return `
               height: 32px;

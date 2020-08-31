@@ -1,4 +1,3 @@
-import { IColour } from './../../../../design-system/dist/types/index.d'
 import { IColourDefinition, ThemeProps } from '@trueme/design-system'
 import { css } from 'styled-components'
 import { ButtonProps } from './shared'
@@ -54,6 +53,13 @@ export const buttonStyles = css<ThemeProps & ButtonProps>`
       case 'pill':
       default:
         switch (size) {
+          case 'tiny':
+            return `
+              padding-top: ${spacing.xs};
+              padding-bottom: ${spacing.xs};
+              padding-left: ${spacing.sm};
+              padding-right: ${spacing.sm};
+            `
           case 'small':
             return `
               padding-top: ${spacing.sm};

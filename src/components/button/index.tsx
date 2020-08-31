@@ -15,6 +15,11 @@ const StyledButton = styled.button<ButtonProps & ButtonHTMLProps>`
       case 'square':
       case 'circle':
         switch (size) {
+          case 'tiny':
+            return `
+              height: 20px;
+              width: 20px;
+            `
           case 'small':
             return `
               height: 32px;

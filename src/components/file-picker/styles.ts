@@ -2,12 +2,12 @@ import { css } from 'styled-components'
 import { FilePickerProps } from './index.native'
 
 export const pickerStyles = css<FilePickerProps>`
-  ${({ theme: { borders, colours, spacing }}) => {
+  ${({ hasThumbnail, theme: { borders, colours }}) => {
     return `
       align-items: center;
       aspect-ratio: 1;
       justify-content: center;
-      border-color: ${colours.tertiary.default};
+      border-color: ${hasThumbnail ? colours.monochrome.base : colours.text};
       border-radius: ${borders.radius.default};
       border-width: ${borders.width.default};
       width: 100%;

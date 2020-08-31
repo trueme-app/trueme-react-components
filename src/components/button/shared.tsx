@@ -5,7 +5,7 @@ export interface ButtonProps {
   variant: ColourVariant
   borderVariant?: ColourVariant | undefined
   shape?: 'pill' | 'circle' | 'square'
-  size?: 'normal' | 'small' | 'large'
+  size?: 'normal' | 'small' | 'large' | 'tiny'
   borderSize?: 'default' | 'md' | 'lg'
   autoWidth?: boolean
   reversed?: boolean

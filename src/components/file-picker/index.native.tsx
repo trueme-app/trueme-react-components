@@ -5,6 +5,7 @@ import styled from 'styled-components/native'
 import { attrStyles, pickerStyles } from './styles'
 
 export interface FilePickerProps {
+  hasThumbnail: boolean
   onPress: () => void
 }
 
