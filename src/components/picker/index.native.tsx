@@ -1,5 +1,5 @@
-import { PickerIOS } from '@react-native-community/picker'
-import { PickerIOSProps } from '@react-native-community/picker/typings/PickerIOS'
+import { Picker } from '@react-native-community/picker'
+import { PickerProps as PickerNativeProps } from '@react-native-community/picker/typings/Picker'
 import { ISystem } from '@trueme/design-system'
 import React, { ReactNode } from 'react'
 import styled, { ThemeConsumer } from 'styled-components/native'
@@ -10,9 +10,9 @@ interface PickerBaseProps {
   children: ReactNode | ReactNode[]
 }
 
-export type PickerProps = PickerBaseProps & PickerIOSProps
+export type PickerProps = PickerBaseProps & PickerNativeProps
 
-const StyledPicker = styled(PickerIOS)<PickerProps>`
+const StyledPicker = styled(Picker)<PickerProps>`
   ${pickerStyles}
 `
 
@@ -29,6 +29,6 @@ const Wrapper = (props: PickerProps) => (
   </ThemeConsumer>
 )
 
-Wrapper.Item = styled(PickerIOS.Item)``
+Wrapper.Item = styled(Picker.Item)``
 
 export default Wrapper
