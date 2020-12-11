@@ -4466,10 +4466,10 @@
     "@svgr/plugin-svgo" "^5.4.0"
     loader-utils "^2.0.0"
 
-"@trueme/design-system@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@trueme/design-system/-/design-system-1.0.3.tgz#7ec0ea51403ba104a806f026879cd266d2ee0125"
-  integrity sha512-HRBVEy1vPESCVis3h2K0LHKdo/RWI7L3jMdmfxpuFBudNG5VSPD4bGtEprAFbaNCHHrZ067gE/3VfwtPrx/F/g==
+"@trueme/design-system@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@trueme/design-system/-/design-system-1.0.4.tgz#03a24650094356229e8f4bbea341a4242db40b2d"
+  integrity sha512-h3XHcHitvU58c2sh7FmAqrFBRXPowQ0LEzsUzqAcLewKKhp1Ej8FflnxRgfNtAjRAvBgBGRXt5d8eCFStUVoqA==
   dependencies:
     "@types/react" "^16.9.41"
     "@types/styled-components" "^5.1.1"
@@ -10450,9 +10450,9 @@ inherits@2.0.3:
   integrity sha1-Yzwsg+PaQqUC9SRmAiSA9CCCYd4=
 
 ini@^1.3.4, ini@^1.3.5, ini@~1.3.0:
-  version "1.3.5"
-  resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
-  integrity sha512-RZY5huIKCMRWDUqZlEi72f/lmXKMvuszcMBduliQ3nnWbx9X/ZBQO7DijMEYS9EhHBb2qacRUMtC7svLwe0lcw==
+  version "1.3.7"
+  resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.7.tgz#a09363e1911972ea16d7a8851005d84cf09a9a84"
+  integrity sha512-iKpRpXP+CrP2jyrxvg1kMUpXDyRUFDWurxbnVT1vQPx+Wz9uCYsMIqYuSBLV+PAaZG/d7kRLKRFc9oDMsH+mFQ==
 
 inquirer@6.2.2:
   version "6.2.2"
