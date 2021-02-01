@@ -4466,10 +4466,10 @@
     "@svgr/plugin-svgo" "^5.4.0"
     loader-utils "^2.0.0"
 
-"@trueme/design-system@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@trueme/design-system/-/design-system-1.0.3.tgz#7ec0ea51403ba104a806f026879cd266d2ee0125"
-  integrity sha512-HRBVEy1vPESCVis3h2K0LHKdo/RWI7L3jMdmfxpuFBudNG5VSPD4bGtEprAFbaNCHHrZ067gE/3VfwtPrx/F/g==
+"@trueme/design-system@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@trueme/design-system/-/design-system-1.0.4.tgz#03a24650094356229e8f4bbea341a4242db40b2d"
+  integrity sha512-h3XHcHitvU58c2sh7FmAqrFBRXPowQ0LEzsUzqAcLewKKhp1Ej8FflnxRgfNtAjRAvBgBGRXt5d8eCFStUVoqA==
   dependencies:
     "@types/react" "^16.9.41"
     "@types/styled-components" "^5.1.1"
@@ -13445,9 +13445,9 @@ neo-async@^2.5.0, neo-async@^2.6.0, neo-async@^2.6.1:
   integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
 
 nested-object-assign@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/nested-object-assign/-/nested-object-assign-1.0.3.tgz#5aca69390d9affe5a612152b5f0843ae399ac597"
-  integrity sha512-kgq1CuvLyUcbcIuTiCA93cQ2IJFSlRwXcN+hLcb2qLJwC2qrePHGZZa7IipyWqaWF6tQjdax2pQnVxdq19Zzwg==
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/nested-object-assign/-/nested-object-assign-1.0.4.tgz#c9db56078eb6043960fdb6ba918a5122a06ccac4"
+  integrity sha512-FlZ7oN9ICt+fbcJ4ag2IsALIcalfE/E16ttdSA8peBiHJI+oEKdOcafqDnUbeUe5NwWGn/m9zZGO9qrAGzfesg==
 
 next-tick@^1.0.0:
   version "1.0.0"
