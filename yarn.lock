@@ -4466,10 +4466,10 @@
     "@svgr/plugin-svgo" "^5.4.0"
     loader-utils "^2.0.0"
 
-"@trueme/design-system@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@trueme/design-system/-/design-system-1.0.3.tgz#7ec0ea51403ba104a806f026879cd266d2ee0125"
-  integrity sha512-HRBVEy1vPESCVis3h2K0LHKdo/RWI7L3jMdmfxpuFBudNG5VSPD4bGtEprAFbaNCHHrZ067gE/3VfwtPrx/F/g==
+"@trueme/design-system@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@trueme/design-system/-/design-system-1.0.4.tgz#03a24650094356229e8f4bbea341a4242db40b2d"
+  integrity sha512-h3XHcHitvU58c2sh7FmAqrFBRXPowQ0LEzsUzqAcLewKKhp1Ej8FflnxRgfNtAjRAvBgBGRXt5d8eCFStUVoqA==
   dependencies:
     "@types/react" "^16.9.41"
     "@types/styled-components" "^5.1.1"
@@ -19538,9 +19538,9 @@ xtend@^4.0.0, xtend@^4.0.1, xtend@~4.0.1:
   integrity sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==
 
 y18n@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.1.tgz#6d15fba884c08679c0d77e88e7759e811e07fa41"
-  integrity sha1-bRX7qITAhnnA136I53WegR4H+kE=
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.2.tgz#85c901bd6470ce71fc4bb723ad209b70f7f28696"
+  integrity sha512-uGZHXkHnhF0XeeAPgnKfPv1bgKAYyVvmNL1xlKsPYZPaIHxGti2hHqvOCQv71XMsLxu1QjergkqogUnms5D3YQ==
 
 "y18n@^3.2.1 || ^4.0.0", y18n@^4.0.0:
   version "4.0.0"
