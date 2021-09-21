@@ -4466,10 +4466,10 @@
     "@svgr/plugin-svgo" "^5.4.0"
     loader-utils "^2.0.0"
 
-"@trueme/design-system@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@trueme/design-system/-/design-system-1.0.3.tgz#7ec0ea51403ba104a806f026879cd266d2ee0125"
-  integrity sha512-HRBVEy1vPESCVis3h2K0LHKdo/RWI7L3jMdmfxpuFBudNG5VSPD4bGtEprAFbaNCHHrZ067gE/3VfwtPrx/F/g==
+"@trueme/design-system@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@trueme/design-system/-/design-system-1.0.4.tgz#03a24650094356229e8f4bbea341a4242db40b2d"
+  integrity sha512-h3XHcHitvU58c2sh7FmAqrFBRXPowQ0LEzsUzqAcLewKKhp1Ej8FflnxRgfNtAjRAvBgBGRXt5d8eCFStUVoqA==
   dependencies:
     "@types/react" "^16.9.41"
     "@types/styled-components" "^5.1.1"
@@ -18220,9 +18220,9 @@ tmp@^0.1.0:
     rimraf "^2.6.3"
 
 tmpl@1.0.x:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/tmpl/-/tmpl-1.0.4.tgz#23640dd7b42d00433911140820e5cf440e521dd1"
-  integrity sha1-I2QN17QtAEM5ERQIIOXPRA5SHdE=
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/tmpl/-/tmpl-1.0.5.tgz#8683e0b902bb9c20c4f726e3c0b69f36518c07cc"
+  integrity sha512-3f0uOEAQwIqGuWW2MVzYg8fV/QNnc/IpuJNG837rLuczAaLVHslWHZQj4IGiEl5Hs3kkbhwL9Ab7Hrsmuj+Smw==
 
 to-arraybuffer@^1.0.0:
   version "1.0.1"
