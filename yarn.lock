@@ -4466,10 +4466,10 @@
     "@svgr/plugin-svgo" "^5.4.0"
     loader-utils "^2.0.0"
 
-"@trueme/design-system@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@trueme/design-system/-/design-system-1.0.3.tgz#7ec0ea51403ba104a806f026879cd266d2ee0125"
-  integrity sha512-HRBVEy1vPESCVis3h2K0LHKdo/RWI7L3jMdmfxpuFBudNG5VSPD4bGtEprAFbaNCHHrZ067gE/3VfwtPrx/F/g==
+"@trueme/design-system@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@trueme/design-system/-/design-system-1.0.4.tgz#03a24650094356229e8f4bbea341a4242db40b2d"
+  integrity sha512-h3XHcHitvU58c2sh7FmAqrFBRXPowQ0LEzsUzqAcLewKKhp1Ej8FflnxRgfNtAjRAvBgBGRXt5d8eCFStUVoqA==
   dependencies:
     "@types/react" "^16.9.41"
     "@types/styled-components" "^5.1.1"
@@ -7943,9 +7943,9 @@ decimal.js@^10.2.0:
   integrity sha512-vDPw+rDgn3bZe1+F/pyEwb1oMG2XTlRVgAa6B4KccTEpYgF8w6eQllVbQcfIJnZyvzFtFpxnpGtx8dd7DJp/Rw==
 
 decode-uri-component@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
-  integrity sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.2.tgz#e69dbe25d37941171dd540e024c444cd5188e1e9"
+  integrity sha512-FqUYQ+8o158GyGTrMFJms9qh3CqTKvAqgqsTnkLI8sKu0028orqBhxNMFkFen0zGyg6epACD32pjVk58ngIErQ==
 
 deep-equal@^1.0.1:
   version "1.0.1"
